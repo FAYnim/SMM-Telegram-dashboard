@@ -9,7 +9,7 @@
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="style.css" rel="stylesheet">
+    <link href="src/css/style.css" rel="stylesheet">
 </head>
 <body>
 

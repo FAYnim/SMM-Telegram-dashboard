@@ -6,7 +6,7 @@
     <title>Transaksi - SMM Bot Admin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <link href="src/css/style.css" rel="stylesheet">
 </head>
 <body>
 
