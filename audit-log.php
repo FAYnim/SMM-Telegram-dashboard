@@ -431,28 +431,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script>
-$(document).ready(function() {
-    $('#sidebarToggle').on('click', function() {
-        $('#sidebar').toggleClass('collapsed show');
-        $('#mainContent').toggleClass('expanded');
-        $('#sidebarOverlay').toggleClass('show');
-    });
-    $('#sidebarOverlay').on('click', function() {
-        $('#sidebar').removeClass('show').addClass('collapsed');
-        $('#mainContent').addClass('expanded');
-        $(this).removeClass('show');
-    });
-
-    $('.expandable-row').on('click', function() {
-        const targetId = $(this).data('target');
-        const detailRow = $('#' + targetId);
-        const icon = $(this).find('.expand-icon');
-        
-        detailRow.toggleClass('show');
-        icon.toggleClass('rotated');
-    });
-});
+<script src="src/js/audit-log.js"></script>
 </script>
 </body>
 </html>
