@@ -10,7 +10,6 @@
 </head>
 <body>
 
-<!-- Navbar -->
 <nav class="navbar navbar-dark bg-dark fixed-top px-3">
     <div class="d-flex align-items-center">
         <button class="btn btn-sidebar-toggle me-2" id="sidebarToggle"><i class="fas fa-bars"></i></button>
@@ -33,7 +32,6 @@
 
 <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-<!-- Sidebar -->
 <nav class="sidebar" id="sidebar">
     <div class="pt-3">
         <div class="sidebar-heading">Menu Utama</div>
@@ -56,7 +54,6 @@
     </div>
 </nav>
 
-<!-- Main Content -->
 <div class="main-content" id="mainContent">
     <div class="page-header">
         <h1><i class="fas fa-tasks me-2"></i>Task Management</h1>
@@ -68,7 +65,6 @@
         </nav>
     </div>
 
-    <!-- Filter Bar -->
     <div class="filter-bar">
         <div class="row g-2 align-items-end">
             <div class="col-md-3">
@@ -100,7 +96,6 @@
         </div>
     </div>
 
-    <!-- Tasks Table -->
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
             <span><i class="fas fa-table me-2"></i>Daftar Task</span>
@@ -218,7 +213,7 @@
                             <td>Like IG Post @brand</td>
                             <td><strong>@john_doe</strong></td>
                             <td><span class="badge bg-success">Approved</span></td>
-                            <td><img src="https://placehold.co/50x50/d4edda/155724?text=✓" class="proof-thumbnail" data-bs-toggle="modal" data-bs-target="#proofModal" alt="Proof"></td>
+                            <td><img src="https://placehold.co/50x50/d4edda/155724?text=OK" class="proof-thumbnail" data-bs-toggle="modal" data-bs-target="#proofModal" alt="Proof"></td>
                             <td class="text-muted small">2026-02-14 14:00</td>
                             <td class="text-muted small">2026-02-14 15:30</td>
                             <td class="text-muted small">2026-02-14 18:00</td>
@@ -231,7 +226,7 @@
                             <td>Comment YouTube Review</td>
                             <td><strong>@diana_r</strong></td>
                             <td><span class="badge bg-success">Approved</span></td>
-                            <td><img src="https://placehold.co/50x50/d4edda/155724?text=✓" class="proof-thumbnail" data-bs-toggle="modal" data-bs-target="#proofModal" alt="Proof"></td>
+                            <td><img src="https://placehold.co/50x50/d4edda/155724?text=OK" class="proof-thumbnail" data-bs-toggle="modal" data-bs-target="#proofModal" alt="Proof"></td>
                             <td class="text-muted small">2026-02-14 12:00</td>
                             <td class="text-muted small">2026-02-14 13:00</td>
                             <td class="text-muted small">2026-02-15 12:30</td>
@@ -244,7 +239,7 @@
                             <td>View TikTok Promo</td>
                             <td><strong>@hannah_p</strong></td>
                             <td><span class="badge bg-danger">Rejected</span></td>
-                            <td><img src="https://placehold.co/50x50/f8d7da/842029?text=✗" class="proof-thumbnail" data-bs-toggle="modal" data-bs-target="#proofModal" alt="Proof"></td>
+                            <td><img src="https://placehold.co/50x50/f8d7da/842029?text=X" class="proof-thumbnail" data-bs-toggle="modal" data-bs-target="#proofModal" alt="Proof"></td>
                             <td class="text-muted small">2026-02-14 08:00</td>
                             <td class="text-muted small">2026-02-14 09:00</td>
                             <td class="text-muted small">2026-02-15 10:10</td>
@@ -290,7 +285,6 @@
     <div class="dashboard-footer">&copy; 2026 SMM Bot Admin Dashboard. All rights reserved.</div>
 </div>
 
-<!-- Proof Image Modal -->
 <div class="modal fade" id="proofModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -305,7 +299,6 @@
     </div>
 </div>
 
-<!-- Approve Task Modal -->
 <div class="modal fade" id="approveTaskModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -330,7 +323,6 @@
     </div>
 </div>
 
-<!-- Reject Task Modal -->
 <div class="modal fade" id="rejectTaskModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">

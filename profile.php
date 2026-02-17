@@ -10,7 +10,6 @@
 </head>
 <body>
 
-<!-- Navbar -->
 <nav class="navbar navbar-dark bg-dark fixed-top px-3">
     <div class="d-flex align-items-center">
         <button class="btn btn-sidebar-toggle me-2" id="sidebarToggle"><i class="fas fa-bars"></i></button>
@@ -33,7 +32,6 @@
 
 <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-<!-- Sidebar -->
 <nav class="sidebar" id="sidebar">
     <div class="pt-3">
         <div class="sidebar-heading">Menu Utama</div>
@@ -56,7 +54,6 @@
     </div>
 </nav>
 
-<!-- Main Content -->
 <div class="main-content" id="mainContent">
     <div class="page-header">
         <h1><i class="fas fa-user-circle me-2"></i>Profil Admin</h1>
@@ -69,7 +66,6 @@
     </div>
 
     <div class="row g-4">
-        <!-- Admin Info Card -->
         <div class="col-lg-5">
             <div class="card">
                 <div class="card-header">
@@ -96,7 +92,6 @@
                 </div>
             </div>
 
-            <!-- Permissions Card -->
             <div class="card mt-4">
                 <div class="card-header">
                     <i class="fas fa-shield-alt me-2"></i>Permissions
@@ -115,7 +110,6 @@
                 </div>
             </div>
 
-            <!-- Activity Summary -->
             <div class="card mt-4">
                 <div class="card-header">
                     <i class="fas fa-chart-bar me-2"></i>Ringkasan Aktivitas
@@ -139,7 +133,6 @@
             </div>
         </div>
 
-        <!-- Change Password Card -->
         <div class="col-lg-7">
             <div class="card">
                 <div class="card-header">
@@ -173,7 +166,6 @@
                                 </button>
                             </div>
                             <div class="form-text">Minimal 8 karakter</div>
-                            <!-- Password Strength Indicator -->
                             <div class="mt-2">
                                 <div class="progress" style="height: 6px;">
                                     <div class="progress-bar" id="passwordStrength" role="progressbar" style="width: 0%"></div>
@@ -200,7 +192,6 @@
                 </div>
             </div>
 
-            <!-- Recent Login Activity -->
             <div class="card mt-4">
                 <div class="card-header">
                     <i class="fas fa-history me-2"></i>Riwayat Login Terakhir
@@ -262,7 +253,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
 $(document).ready(function() {
-    // Sidebar toggle
     $('#sidebarToggle').on('click', function() {
         $('#sidebar').toggleClass('collapsed show');
         $('#mainContent').toggleClass('expanded');
@@ -274,7 +264,6 @@ $(document).ready(function() {
         $(this).removeClass('show');
     });
 
-    // Toggle password visibility
     $('.toggle-password').on('click', function() {
         const targetId = $(this).data('target');
         const input = $('#' + targetId);
@@ -288,7 +277,6 @@ $(document).ready(function() {
         }
     });
 
-    // Password strength indicator
     $('#newPassword').on('input', function() {
         const val = $(this).val();
         let strength = 0;
@@ -314,7 +302,6 @@ $(document).ready(function() {
         $('#strengthText').text(val.length > 0 ? text : '');
     });
 
-    // Confirm password match
     $('#confirmPassword').on('input', function() {
         const newPass = $('#newPassword').val();
         const confirmPass = $(this).val();
@@ -327,7 +314,6 @@ $(document).ready(function() {
         }
     });
 
-    // Submit form
     $('#changePasswordForm').on('submit', function(e) {
         e.preventDefault();
         const newPass = $('#newPassword').val();

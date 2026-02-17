@@ -1,8 +1,6 @@
-/* ============================================
-   SMM Bot Admin Dashboard - Custom Styles
-   ============================================ */
+/* Dashboard */
 
-/* ---------- Root Variables ---------- */
+/* Root */
 :root {
     --sidebar-width: 250px;
     --navbar-height: 56px;
@@ -15,14 +13,14 @@
     --transition-speed: 0.3s;
 }
 
-/* ---------- Global ---------- */
+/* Global */
 body {
     background-color: var(--body-bg);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-x: hidden;
 }
 
-/* ---------- Navbar ---------- */
+/* Navbar */
 .navbar {
     height: var(--navbar-height);
     z-index: 1040;
@@ -50,7 +48,7 @@ body {
     object-fit: cover;
 }
 
-/* ---------- Sidebar ---------- */
+/* Sidebar */
 .sidebar {
     position: fixed;
     top: var(--navbar-height);
@@ -111,12 +109,12 @@ body {
     font-weight: 700;
 }
 
-/* Sidebar collapsed state */
+/* Sidebar collapsed */
 .sidebar.collapsed {
     transform: translateX(-100%);
 }
 
-/* ---------- Main Content ---------- */
+/* Main content */
 .main-content {
     margin-left: var(--sidebar-width);
     padding-top: calc(var(--navbar-height) + 1.5rem);
@@ -130,7 +128,7 @@ body {
     margin-left: 0;
 }
 
-/* ---------- Page Header ---------- */
+/* Page header */
 .page-header {
     margin-bottom: 1.5rem;
 }
@@ -145,7 +143,7 @@ body {
     margin-bottom: 0;
 }
 
-/* ---------- KPI Cards ---------- */
+/* KPI cards */
 .kpi-card {
     border: none;
     border-radius: 0.75rem;
@@ -187,7 +185,7 @@ body {
     font-weight: 600;
 }
 
-/* ---------- Cards ---------- */
+/* Cards */
 .card {
     border: none;
     border-radius: 0.75rem;
@@ -201,7 +199,7 @@ body {
     border-radius: 0.75rem 0.75rem 0 0 !important;
 }
 
-/* ---------- Tables ---------- */
+/* Tables */
 .table-dashboard {
     font-size: 0.875rem;
 }
@@ -227,7 +225,7 @@ body {
     background: rgba(13, 110, 253, 0.04);
 }
 
-/* ---------- Badges ---------- */
+/* Badges */
 .badge {
     font-weight: 600;
     padding: 0.35em 0.65em;
@@ -235,7 +233,7 @@ body {
     letter-spacing: 0.3px;
 }
 
-/* ---------- Buttons ---------- */
+/* Buttons */
 .btn {
     font-size: 0.875rem;
     font-weight: 500;
@@ -256,7 +254,7 @@ body {
     border-radius: 0.375rem;
 }
 
-/* ---------- Proof Thumbnails ---------- */
+/* Proof thumbs */
 .proof-thumbnail {
     width: 50px;
     height: 50px;
@@ -271,7 +269,7 @@ body {
     box-shadow: 0 4px 8px rgba(0,0,0,.15);
 }
 
-/* ---------- Status Dots ---------- */
+/* Status dots */
 .status-dot {
     width: 8px;
     height: 8px;
@@ -280,13 +278,13 @@ body {
     margin-right: 6px;
 }
 
-/* ---------- Chart Containers ---------- */
+/* Charts */
 .chart-container {
     position: relative;
     height: 300px;
 }
 
-/* ---------- Profile Avatar ---------- */
+/* Profile avatar */
 .profile-avatar {
     width: 120px;
     height: 120px;
@@ -302,7 +300,7 @@ body {
     object-fit: cover;
 }
 
-/* ---------- Timeline ---------- */
+/* Timeline */
 .timeline {
     position: relative;
     padding-left: 30px;
@@ -341,7 +339,7 @@ body {
     box-shadow: 0 0 0 2px #ffc107;
 }
 
-/* ---------- Settings Section ---------- */
+/* Settings */
 .settings-card {
     margin-bottom: 1.5rem;
 }
@@ -349,7 +347,7 @@ body {
     font-size: 1rem;
 }
 
-/* ---------- JSON Viewer ---------- */
+/* JSON viewer */
 .json-viewer {
     background: #1e1e1e;
     color: #d4d4d4;
@@ -363,7 +361,7 @@ body {
     word-wrap: break-word;
 }
 
-/* ---------- Login Page ---------- */
+/* Login */
 .login-wrapper {
     min-height: 100vh;
     display: flex;
@@ -414,7 +412,7 @@ body {
     border-radius: 0.5rem;
 }
 
-/* ---------- Expandable Rows ---------- */
+/* Expand rows */
 .expandable-row {
     cursor: pointer;
 }
@@ -438,7 +436,7 @@ body {
     padding: 1rem 1.25rem !important;
 }
 
-/* ---------- Pagination ---------- */
+/* Pagination */
 .pagination .page-link {
     border-radius: 0.375rem;
     margin: 0 2px;
@@ -446,7 +444,7 @@ body {
     padding: 0.4rem 0.75rem;
 }
 
-/* ---------- Filter Bar ---------- */
+/* Filter bar */
 .filter-bar {
     background: #fff;
     border-radius: 0.75rem;
@@ -460,7 +458,7 @@ body {
     border-radius: 0.5rem;
 }
 
-/* ---------- Summary Cards ---------- */
+/* Summary cards */
 .summary-card {
     text-align: center;
     padding: 1rem;
@@ -476,7 +474,7 @@ body {
     letter-spacing: 0.5px;
 }
 
-/* ---------- Modals ---------- */
+/* Modals */
 .modal-content {
     border: none;
     border-radius: 0.75rem;
@@ -493,7 +491,7 @@ body {
     padding: 1rem 1.5rem;
 }
 
-/* ---------- Footer ---------- */
+/* Footer */
 .dashboard-footer {
     text-align: center;
     padding: 1.5rem;
@@ -503,7 +501,7 @@ body {
     margin-top: 2rem;
 }
 
-/* ---------- Responsive ---------- */
+/* Responsive */
 @media (max-width: 991.98px) {
     .sidebar {
         transform: translateX(-100%);
@@ -535,7 +533,7 @@ body {
     }
 }
 
-/* ---------- Scrollbar for tables ---------- */
+/* Table scrollbar */
 .table-responsive::-webkit-scrollbar {
     height: 6px;
 }
@@ -544,7 +542,7 @@ body {
     border-radius: 3px;
 }
 
-/* ---------- Overlay for mobile sidebar ---------- */
+/* Mobile overlay */
 .sidebar-overlay {
     display: none;
     position: fixed;
@@ -559,7 +557,7 @@ body {
     display: block;
 }
 
-/* ---------- Wallet Info Cards ---------- */
+/* Wallet cards */
 .wallet-card {
     border-left: 4px solid;
     border-radius: 0.75rem;

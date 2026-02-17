@@ -10,7 +10,6 @@
 </head>
 <body>
 
-<!-- Navbar -->
 <nav class="navbar navbar-dark bg-dark fixed-top px-3">
     <div class="d-flex align-items-center">
         <button class="btn btn-sidebar-toggle me-2" id="sidebarToggle"><i class="fas fa-bars"></i></button>
@@ -33,7 +32,6 @@
 
 <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-<!-- Sidebar -->
 <nav class="sidebar" id="sidebar">
     <div class="pt-3">
         <div class="sidebar-heading">Menu Utama</div>
@@ -56,7 +54,6 @@
     </div>
 </nav>
 
-<!-- Main Content -->
 <div class="main-content" id="mainContent">
     <div class="page-header">
         <h1><i class="fas fa-user me-2"></i>User Detail</h1>
@@ -70,7 +67,6 @@
     </div>
 
     <div class="row g-4">
-        <!-- Profile Card -->
         <div class="col-lg-4">
             <div class="card text-center">
                 <div class="card-body py-4">
@@ -90,7 +86,6 @@
                 </div>
             </div>
 
-            <!-- Referral Info -->
             <div class="card mt-3">
                 <div class="card-header"><i class="fas fa-share-alt me-2"></i>Referral Info</div>
                 <div class="card-body">
@@ -101,9 +96,7 @@
             </div>
         </div>
 
-        <!-- Right Column -->
         <div class="col-lg-8">
-            <!-- Wallet Info -->
             <div class="row g-3 mb-3">
                 <div class="col-sm-6 col-xl-3">
                     <div class="card wallet-card border-primary">
@@ -139,7 +132,6 @@
                 </div>
             </div>
 
-            <!-- Social Accounts -->
             <div class="card mb-3">
                 <div class="card-header"><i class="fas fa-share-nodes me-2"></i>Social Accounts</div>
                 <div class="card-body p-0">
@@ -178,7 +170,6 @@
                 </div>
             </div>
 
-            <!-- Campaigns -->
             <div class="card mb-3">
                 <div class="card-header"><i class="fas fa-bullhorn me-2"></i>Campaigns</div>
                 <div class="card-body p-0">
@@ -214,7 +205,6 @@
                 </div>
             </div>
 
-            <!-- Tasks Completed -->
             <div class="card mb-3">
                 <div class="card-header"><i class="fas fa-tasks me-2"></i>Tasks Dikerjakan</div>
                 <div class="card-body p-0">
@@ -269,7 +259,6 @@
                 </div>
             </div>
 
-            <!-- Transaction History -->
             <div class="card">
                 <div class="card-header"><i class="fas fa-exchange-alt me-2"></i>Transaction History</div>
                 <div class="card-body p-0">

@@ -10,7 +10,6 @@
 </head>
 <body>
 
-<!-- Navbar -->
 <nav class="navbar navbar-dark bg-dark fixed-top px-3">
     <div class="d-flex align-items-center">
         <button class="btn btn-sidebar-toggle me-2" id="sidebarToggle"><i class="fas fa-bars"></i></button>
@@ -33,7 +32,6 @@
 
 <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-<!-- Sidebar -->
 <nav class="sidebar" id="sidebar">
     <div class="pt-3">
         <div class="sidebar-heading">Menu Utama</div>
@@ -56,7 +54,6 @@
     </div>
 </nav>
 
-<!-- Main Content -->
 <div class="main-content" id="mainContent">
     <div class="page-header">
         <h1><i class="fas fa-money-bill-wave me-2"></i>Deposit Management</h1>
@@ -68,7 +65,6 @@
         </nav>
     </div>
 
-    <!-- Filter Bar -->
     <div class="filter-bar">
         <div class="row g-2 align-items-end">
             <div class="col-md-3">
@@ -99,7 +95,6 @@
         </div>
     </div>
 
-    <!-- Deposits Table -->
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
             <span><i class="fas fa-table me-2"></i>Daftar Deposit</span>
@@ -172,7 +167,7 @@
                             <td>42</td>
                             <td><strong>@charlie_x</strong></td>
                             <td class="fw-bold">Rp 200.000</td>
-                            <td><img src="https://placehold.co/50x50/d4edda/155724?text=✓" class="proof-thumbnail" data-bs-toggle="modal" data-bs-target="#proofModal" alt="Proof"></td>
+                            <td><img src="https://placehold.co/50x50/d4edda/155724?text=OK" class="proof-thumbnail" data-bs-toggle="modal" data-bs-target="#proofModal" alt="Proof"></td>
                             <td><span class="badge bg-success">Approved</span></td>
                             <td>@superadmin</td>
                             <td>Sesuai bukti</td>
@@ -186,7 +181,7 @@
                             <td>41</td>
                             <td><strong>@fiona_m</strong></td>
                             <td class="fw-bold">Rp 50.000</td>
-                            <td><img src="https://placehold.co/50x50/f8d7da/842029?text=✗" class="proof-thumbnail" data-bs-toggle="modal" data-bs-target="#proofModal" alt="Proof"></td>
+                            <td><img src="https://placehold.co/50x50/f8d7da/842029?text=X" class="proof-thumbnail" data-bs-toggle="modal" data-bs-target="#proofModal" alt="Proof"></td>
                             <td><span class="badge bg-danger">Rejected</span></td>
                             <td>@superadmin</td>
                             <td>Bukti tidak valid</td>
@@ -245,7 +240,7 @@
                             <td>37</td>
                             <td><strong>@maria_g</strong></td>
                             <td class="fw-bold">Rp 500.000</td>
-                            <td><img src="https://placehold.co/50x50/d4edda/155724?text=✓" class="proof-thumbnail" data-bs-toggle="modal" data-bs-target="#proofModal" alt="Proof"></td>
+                            <td><img src="https://placehold.co/50x50/d4edda/155724?text=OK" class="proof-thumbnail" data-bs-toggle="modal" data-bs-target="#proofModal" alt="Proof"></td>
                             <td><span class="badge bg-success">Approved</span></td>
                             <td>@superadmin</td>
                             <td>OK</td>
@@ -259,7 +254,7 @@
                             <td>36</td>
                             <td><strong>@george_l</strong></td>
                             <td class="fw-bold">Rp 100.000</td>
-                            <td><img src="https://placehold.co/50x50/e2e3e5/41464b?text=—" class="proof-thumbnail" data-bs-toggle="modal" data-bs-target="#proofModal" alt="Proof"></td>
+                            <td><img src="https://placehold.co/50x50/e2e3e5/41464b?text=-" class="proof-thumbnail" data-bs-toggle="modal" data-bs-target="#proofModal" alt="Proof"></td>
                             <td><span class="badge bg-secondary">Canceled</span></td>
                             <td>-</td>
                             <td>Dibatalkan user</td>
@@ -294,7 +289,6 @@
     <div class="dashboard-footer">&copy; 2026 SMM Bot Admin Dashboard. All rights reserved.</div>
 </div>
 
-<!-- Proof Image Modal -->
 <div class="modal fade" id="proofModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -309,7 +303,6 @@
     </div>
 </div>
 
-<!-- Approve Modal -->
 <div class="modal fade" id="approveModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -340,7 +333,6 @@
     </div>
 </div>
 
-<!-- Reject Modal -->
 <div class="modal fade" id="rejectModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">

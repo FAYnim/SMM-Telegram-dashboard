@@ -10,7 +10,6 @@
 </head>
 <body>
 
-<!-- Navbar -->
 <nav class="navbar navbar-dark bg-dark fixed-top px-3">
     <div class="d-flex align-items-center">
         <button class="btn btn-sidebar-toggle me-2" id="sidebarToggle"><i class="fas fa-bars"></i></button>
@@ -33,7 +32,6 @@
 
 <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-<!-- Sidebar -->
 <nav class="sidebar" id="sidebar">
     <div class="pt-3">
         <div class="sidebar-heading">Menu Utama</div>
@@ -56,7 +54,6 @@
     </div>
 </nav>
 
-<!-- Main Content -->
 <div class="main-content" id="mainContent">
     <div class="page-header">
         <h1><i class="fas fa-clipboard-check me-2"></i>Task Detail #156</h1>
@@ -70,9 +67,7 @@
     </div>
 
     <div class="row g-4">
-        <!-- Left Column: Info -->
         <div class="col-lg-5">
-            <!-- Task Status -->
             <div class="card mb-3">
                 <div class="card-header d-flex justify-content-between align-items-center">
                     <span><i class="fas fa-info-circle me-2"></i>Status Task</span>
@@ -92,7 +87,6 @@
                 </div>
             </div>
 
-            <!-- Campaign Info -->
             <div class="card mb-3">
                 <div class="card-header"><i class="fas fa-bullhorn me-2"></i>Informasi Campaign</div>
                 <div class="card-body">
@@ -121,7 +115,6 @@
                 </div>
             </div>
 
-            <!-- Worker Info -->
             <div class="card mb-3">
                 <div class="card-header"><i class="fas fa-user me-2"></i>Informasi Worker</div>
                 <div class="card-body">
@@ -129,7 +122,7 @@
                         <img src="https://ui-avatars.com/api/?name=Alice+W&background=6f42c1&color=fff&size=48&rounded=true" class="me-3" alt="Worker" style="width:48px;height:48px;border-radius:50%;">
                         <div>
                             <h6 class="mb-0 fw-bold">Alice Wonderland</h6>
-                            <span class="text-muted small">@alice_w · Chat ID: 234567890</span>
+                            <span class="text-muted small">@alice_w - Chat ID: 234567890</span>
                         </div>
                     </div>
                     <table class="table table-borderless mb-0">
@@ -141,7 +134,6 @@
                 </div>
             </div>
 
-            <!-- Timeline -->
             <div class="card mb-3">
                 <div class="card-header"><i class="fas fa-clock me-2"></i>Timeline</div>
                 <div class="card-body">
@@ -165,7 +157,6 @@
                 </div>
             </div>
 
-            <!-- Action Buttons -->
             <div class="d-flex gap-2">
                 <button class="btn btn-success flex-fill" data-bs-toggle="modal" data-bs-target="#approveTaskDetailModal">
                     <i class="fas fa-check me-1"></i> Approve Task
@@ -176,7 +167,6 @@
             </div>
         </div>
 
-        <!-- Right Column: Proof Image -->
         <div class="col-lg-7">
             <div class="card">
                 <div class="card-header"><i class="fas fa-image me-2"></i>Bukti Task (Proof)</div>
@@ -191,7 +181,6 @@
     <div class="dashboard-footer">&copy; 2026 SMM Bot Admin Dashboard. All rights reserved.</div>
 </div>
 
-<!-- Full Proof Modal -->
 <div class="modal fade" id="fullProofModal" tabindex="-1">
     <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
@@ -206,7 +195,6 @@
     </div>
 </div>
 
-<!-- Approve Task Modal -->
 <div class="modal fade" id="approveTaskDetailModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -235,7 +223,6 @@
     </div>
 </div>
 
-<!-- Reject Task Modal -->
 <div class="modal fade" id="rejectTaskDetailModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">

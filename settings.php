@@ -10,7 +10,6 @@
 </head>
 <body>
 
-<!-- Navbar -->
 <nav class="navbar navbar-dark bg-dark fixed-top px-3">
     <div class="d-flex align-items-center">
         <button class="btn btn-sidebar-toggle me-2" id="sidebarToggle"><i class="fas fa-bars"></i></button>
@@ -33,7 +32,6 @@
 
 <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-<!-- Sidebar -->
 <nav class="sidebar" id="sidebar">
     <div class="pt-3">
         <div class="sidebar-heading">Menu Utama</div>
@@ -56,7 +54,6 @@
     </div>
 </nav>
 
-<!-- Main Content -->
 <div class="main-content" id="mainContent">
     <div class="page-header">
         <h1><i class="fas fa-cog me-2"></i>Platform Settings</h1>
@@ -68,12 +65,10 @@
         </nav>
     </div>
 
-    <!-- Alerts -->
     <div class="alert alert-success d-none" id="settingsSaved" role="alert">
         <i class="fas fa-check-circle me-1"></i> Pengaturan berhasil disimpan!
     </div>
 
-    <!-- Section 1: Payment Methods -->
     <div class="card settings-card">
         <div class="card-header">
             <i class="fas fa-credit-card me-2"></i>Payment Methods
@@ -117,7 +112,6 @@
         </div>
     </div>
 
-    <!-- Section 2: Withdrawal Settings -->
     <div class="card settings-card">
         <div class="card-header">
             <i class="fas fa-wallet me-2"></i>Withdrawal Settings
@@ -162,7 +156,6 @@
         </div>
     </div>
 
-    <!-- Section 3: Campaign Settings -->
     <div class="card settings-card">
         <div class="card-header">
             <i class="fas fa-bullhorn me-2"></i>Campaign Settings
@@ -186,7 +179,6 @@
         </div>
     </div>
 
-    <!-- Section 4: Referral Settings -->
     <div class="card settings-card">
         <div class="card-header">
             <i class="fas fa-share-alt me-2"></i>Referral Settings
@@ -200,7 +192,7 @@
                             <div class="form-check form-switch">
                                 <input class="form-check-input" type="checkbox" id="referralMandatory" checked style="width:3em;height:1.5em;">
                                 <label class="form-check-label ms-2" for="referralMandatory" id="referralLabel">
-                                    <span class="badge bg-success">Aktif</span> — User wajib memasukkan kode referral saat registrasi
+                                    <span class="badge bg-success">Aktif</span> - User wajib memasukkan kode referral saat registrasi
                                 </label>
                             </div>
                         </div>
@@ -228,7 +220,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
 $(document).ready(function() {
-    // Sidebar toggle
     $('#sidebarToggle').on('click', function() {
         $('#sidebar').toggleClass('collapsed show');
         $('#mainContent').toggleClass('expanded');
@@ -240,7 +231,6 @@ $(document).ready(function() {
         $(this).removeClass('show');
     });
 
-    // Fee type toggle
     $('input[name="feeType"]').on('change', function() {
         if ($(this).val() === 'flat') {
             $('#feeTypeLabel').text('Rp (Flat)');
@@ -249,16 +239,14 @@ $(document).ready(function() {
         }
     });
 
-    // Referral toggle
     $('#referralMandatory').on('change', function() {
         if ($(this).is(':checked')) {
-            $('#referralLabel').html('<span class="badge bg-success">Aktif</span> — User wajib memasukkan kode referral saat registrasi');
+            $('#referralLabel').html('<span class="badge bg-success">Aktif</span> - User wajib memasukkan kode referral saat registrasi');
         } else {
-            $('#referralLabel').html('<span class="badge bg-secondary">Nonaktif</span> — User dapat skip kode referral');
+            $('#referralLabel').html('<span class="badge bg-secondary">Nonaktif</span> - User dapat skip kode referral');
         }
     });
 
-    // Save settings
     $('.btn-save-settings').on('click', function() {
         const btn = $(this);
         const originalText = btn.html();

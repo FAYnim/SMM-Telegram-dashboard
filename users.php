@@ -10,7 +10,6 @@
 </head>
 <body>
 
-<!-- Navbar -->
 <nav class="navbar navbar-dark bg-dark fixed-top px-3">
     <div class="d-flex align-items-center">
         <button class="btn btn-sidebar-toggle me-2" id="sidebarToggle"><i class="fas fa-bars"></i></button>
@@ -31,10 +30,8 @@
     </div>
 </nav>
 
-<!-- Sidebar Overlay -->
 <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-<!-- Sidebar -->
 <nav class="sidebar" id="sidebar">
     <div class="pt-3">
         <div class="sidebar-heading">Menu Utama</div>
@@ -57,7 +54,6 @@
     </div>
 </nav>
 
-<!-- Main Content -->
 <div class="main-content" id="mainContent">
     <div class="page-header">
         <h1><i class="fas fa-users me-2"></i>User Management</h1>
@@ -69,7 +65,6 @@
         </nav>
     </div>
 
-    <!-- Filter Bar -->
     <div class="filter-bar">
         <div class="row g-2 align-items-end">
             <div class="col-md-4">
@@ -100,7 +95,6 @@
         </div>
     </div>
 
-    <!-- Users Table -->
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
             <span><i class="fas fa-table me-2"></i>Daftar User (1,247 total)</span>
@@ -305,7 +299,6 @@ $(document).ready(function() {
         $('#mainContent').addClass('expanded');
         $(this).removeClass('show');
     });
-    // Select all checkbox
     $('#selectAll').on('change', function() {
         $('.row-check').prop('checked', $(this).prop('checked'));
     });

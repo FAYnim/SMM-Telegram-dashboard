@@ -4,18 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - SMM Bot Admin</title>
-    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
+    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-    <!-- Chart.js -->
+    
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-    <!-- Custom CSS -->
+    
     <link href="src/css/style.css" rel="stylesheet">
 </head>
 <body>
 
-<!-- Navbar -->
 <nav class="navbar navbar-dark bg-dark fixed-top px-3">
     <div class="d-flex align-items-center">
         <button class="btn btn-sidebar-toggle me-2" id="sidebarToggle">
@@ -40,10 +38,8 @@
     </div>
 </nav>
 
-<!-- Sidebar Overlay -->
 <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-<!-- Sidebar -->
 <nav class="sidebar" id="sidebar">
     <div class="pt-3">
         <div class="sidebar-heading">Menu Utama</div>
@@ -69,9 +65,8 @@
     </div>
 </nav>
 
-<!-- Main Content -->
 <div class="main-content" id="mainContent">
-    <!-- Page Header -->
+    
     <div class="page-header">
         <h1><i class="fas fa-tachometer-alt me-2"></i>Dashboard Overview</h1>
         <nav aria-label="breadcrumb">
@@ -81,7 +76,6 @@
         </nav>
     </div>
 
-    <!-- KPI Cards Row 1 -->
     <div class="row g-3 mb-4">
         <div class="col-xl-3 col-md-6">
             <div class="card kpi-card">
@@ -149,7 +143,6 @@
         </div>
     </div>
 
-    <!-- KPI Cards Row 2 -->
     <div class="row g-3 mb-4">
         <div class="col-xl-3 col-md-6">
             <div class="card kpi-card">
@@ -213,7 +206,6 @@
         </div>
     </div>
 
-    <!-- Charts Row -->
     <div class="row g-3 mb-4">
         <div class="col-lg-7">
             <div class="card">
@@ -243,7 +235,6 @@
         </div>
     </div>
 
-    <!-- Recent Activity -->
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
             <span><i class="fas fa-history me-2"></i>Aktivitas Terbaru</span>
@@ -349,19 +340,15 @@
         </div>
     </div>
 
-    <!-- Footer -->
     <div class="dashboard-footer">
         &copy; 2026 SMM Bot Admin Dashboard. All rights reserved.
     </div>
 </div>
 
-<!-- Bootstrap 5 JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-<!-- jQuery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
 $(document).ready(function() {
-    // Sidebar toggle
     $('#sidebarToggle').on('click', function() {
         $('#sidebar').toggleClass('collapsed show');
         $('#mainContent').toggleClass('expanded');
@@ -374,7 +361,6 @@ $(document).ready(function() {
         $(this).removeClass('show');
     });
 
-    // Registration Trend Chart (30 days)
     const regLabels = [];
     const regData = [];
     for (let i = 29; i >= 0; i--) {
@@ -383,7 +369,6 @@ $(document).ready(function() {
         regLabels.push(d.getDate() + '/' + (d.getMonth() + 1));
         regData.push(Math.floor(Math.random() * 15) + 2);
     }
-
     new Chart(document.getElementById('registrationChart'), {
         type: 'line',
         data: {
@@ -420,7 +405,6 @@ $(document).ready(function() {
         }
     });
 
-    // Transaction Volume Chart (7 days)
     const txLabels = [];
     for (let i = 6; i >= 0; i--) {
         const d = new Date();
@@ -428,7 +412,6 @@ $(document).ready(function() {
         const days = ['Min', 'Sen', 'Sel', 'Rab', 'Kam', 'Jum', 'Sab'];
         txLabels.push(days[d.getDay()] + ' ' + d.getDate() + '/' + (d.getMonth() + 1));
     }
-
     new Chart(document.getElementById('transactionChart'), {
         type: 'bar',
         data: {

@@ -10,7 +10,6 @@
 </head>
 <body>
 
-<!-- Navbar -->
 <nav class="navbar navbar-dark bg-dark fixed-top px-3">
     <div class="d-flex align-items-center">
         <button class="btn btn-sidebar-toggle me-2" id="sidebarToggle"><i class="fas fa-bars"></i></button>
@@ -33,7 +32,6 @@
 
 <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-<!-- Sidebar -->
 <nav class="sidebar" id="sidebar">
     <div class="pt-3">
         <div class="sidebar-heading">Menu Utama</div>
@@ -56,7 +54,6 @@
     </div>
 </nav>
 
-<!-- Main Content -->
 <div class="main-content" id="mainContent">
     <div class="page-header">
         <h1><i class="fas fa-clipboard-list me-2"></i>Audit Log</h1>
@@ -68,7 +65,6 @@
         </nav>
     </div>
 
-    <!-- Filter Bar -->
     <div class="filter-bar">
         <div class="row g-2 align-items-end">
             <div class="col-md-3">
@@ -106,7 +102,6 @@
         </div>
     </div>
 
-    <!-- Audit Log Table -->
     <div class="card">
         <div class="card-header">
             <i class="fas fa-table me-2"></i>Log Aktivitas Admin
@@ -127,7 +122,6 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- Row 1 -->
                         <tr class="expandable-row" data-target="detail-1">
                             <td><i class="fas fa-chevron-right expand-icon"></i></td>
                             <td>250</td>
@@ -167,7 +161,6 @@
                             </td>
                         </tr>
 
-                        <!-- Row 2 -->
                         <tr class="expandable-row" data-target="detail-2">
                             <td><i class="fas fa-chevron-right expand-icon"></i></td>
                             <td>249</td>
@@ -205,7 +198,6 @@
                             </td>
                         </tr>
 
-                        <!-- Row 3 -->
                         <tr class="expandable-row" data-target="detail-3">
                             <td><i class="fas fa-chevron-right expand-icon"></i></td>
                             <td>248</td>
@@ -245,7 +237,6 @@
                             </td>
                         </tr>
 
-                        <!-- Row 4 -->
                         <tr class="expandable-row" data-target="detail-4">
                             <td><i class="fas fa-chevron-right expand-icon"></i></td>
                             <td>247</td>
@@ -282,7 +273,6 @@
                             </td>
                         </tr>
 
-                        <!-- Row 5 -->
                         <tr class="expandable-row" data-target="detail-5">
                             <td><i class="fas fa-chevron-right expand-icon"></i></td>
                             <td>246</td>
@@ -316,7 +306,6 @@
                             </td>
                         </tr>
 
-                        <!-- Row 6 -->
                         <tr class="expandable-row" data-target="detail-6">
                             <td><i class="fas fa-chevron-right expand-icon"></i></td>
                             <td>245</td>
@@ -350,7 +339,6 @@
                             </td>
                         </tr>
 
-                        <!-- Row 7 -->
                         <tr class="expandable-row" data-target="detail-7">
                             <td><i class="fas fa-chevron-right expand-icon"></i></td>
                             <td>244</td>
@@ -387,7 +375,6 @@
                             </td>
                         </tr>
 
-                        <!-- Row 8 -->
                         <tr class="expandable-row" data-target="detail-8">
                             <td><i class="fas fa-chevron-right expand-icon"></i></td>
                             <td>243</td>
@@ -446,7 +433,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
 $(document).ready(function() {
-    // Sidebar toggle
     $('#sidebarToggle').on('click', function() {
         $('#sidebar').toggleClass('collapsed show');
         $('#mainContent').toggleClass('expanded');
@@ -458,7 +444,6 @@ $(document).ready(function() {
         $(this).removeClass('show');
     });
 
-    // Expandable rows
     $('.expandable-row').on('click', function() {
         const targetId = $(this).data('target');
         const detailRow = $('#' + targetId);

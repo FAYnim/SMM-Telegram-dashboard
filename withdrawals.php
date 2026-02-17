@@ -10,7 +10,6 @@
 </head>
 <body>
 
-<!-- Navbar -->
 <nav class="navbar navbar-dark bg-dark fixed-top px-3">
     <div class="d-flex align-items-center">
         <button class="btn btn-sidebar-toggle me-2" id="sidebarToggle"><i class="fas fa-bars"></i></button>
@@ -33,7 +32,6 @@
 
 <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-<!-- Sidebar -->
 <nav class="sidebar" id="sidebar">
     <div class="pt-3">
         <div class="sidebar-heading">Menu Utama</div>
@@ -56,7 +54,6 @@
     </div>
 </nav>
 
-<!-- Main Content -->
 <div class="main-content" id="mainContent">
     <div class="page-header">
         <h1><i class="fas fa-wallet me-2"></i>Withdrawal Management</h1>
@@ -68,7 +65,6 @@
         </nav>
     </div>
 
-    <!-- Filter Bar -->
     <div class="filter-bar">
         <div class="row g-2 align-items-end">
             <div class="col-md-3">
@@ -99,7 +95,6 @@
         </div>
     </div>
 
-    <!-- Withdrawals Table -->
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
             <span><i class="fas fa-table me-2"></i>Daftar Withdrawal</span>
@@ -281,7 +276,6 @@
     <div class="dashboard-footer">&copy; 2026 SMM Bot Admin Dashboard. All rights reserved.</div>
 </div>
 
-<!-- Approve Withdrawal Modal -->
 <div class="modal fade" id="approveWdModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -314,7 +308,6 @@
     </div>
 </div>
 
-<!-- Reject Withdrawal Modal -->
 <div class="modal fade" id="rejectWdModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">

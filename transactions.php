@@ -10,7 +10,6 @@
 </head>
 <body>
 
-<!-- Navbar -->
 <nav class="navbar navbar-dark bg-dark fixed-top px-3">
     <div class="d-flex align-items-center">
         <button class="btn btn-sidebar-toggle me-2" id="sidebarToggle"><i class="fas fa-bars"></i></button>
@@ -33,7 +32,6 @@
 
 <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-<!-- Sidebar -->
 <nav class="sidebar" id="sidebar">
     <div class="pt-3">
         <div class="sidebar-heading">Menu Utama</div>
@@ -56,7 +54,6 @@
     </div>
 </nav>
 
-<!-- Main Content -->
 <div class="main-content" id="mainContent">
     <div class="page-header">
         <h1><i class="fas fa-exchange-alt me-2"></i>Wallet Transactions</h1>
@@ -68,7 +65,6 @@
         </nav>
     </div>
 
-    <!-- Summary Cards -->
     <div class="row g-3 mb-4">
         <div class="col-md-4">
             <div class="card">
@@ -96,7 +92,6 @@
         </div>
     </div>
 
-    <!-- Filter Bar -->
     <div class="filter-bar">
         <div class="row g-2 align-items-end">
             <div class="col-md-3">
@@ -132,7 +127,6 @@
         </div>
     </div>
 
-    <!-- Transactions Table -->
     <div class="card">
         <div class="card-header">
             <i class="fas fa-table me-2"></i>Riwayat Transaksi
