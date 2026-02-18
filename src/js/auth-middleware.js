@@ -1,4 +1,4 @@
-const CookieManager = {
+export const CookieManager = {
     set: function (name, value, days) {
         let expires = "";
         if(days) {

@@ -1,3 +1,5 @@
+import { CookieManager } from "./auth-middleware";
+
 $(document).ready(function() {
     $('#togglePassword').on('click', function() {
         const input = $('#password');

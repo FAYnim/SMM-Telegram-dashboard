@@ -1,3 +1,5 @@
+import { CookieManager } from "./auth-middleware";
+
 $(document).ready(function() {
     $('#sidebarToggle').on('click', function() {
         $('#sidebar').toggleClass('collapsed show');
