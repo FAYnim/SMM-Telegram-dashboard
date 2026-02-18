@@ -97,8 +97,8 @@
 
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
-            <span><i class="fas fa-table me-2"></i>Daftar Withdrawal</span>
-            <span class="badge bg-warning">5 Pending</span>
+            <span><i class="fas fa-table me-2"></i>Daftar Withdrawal (<span id="total-withdrawal">0</span> total)</span>
+            <span class="badge bg-warning"><span id="total-pending">0</span> Pending</span>
         </div>
         <div class="card-body p-0">
             <div class="table-responsive">
@@ -119,138 +119,12 @@
                             <th>Aksi</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="withdrawalTableBody">
                         <tr>
-                            <td>28</td>
-                            <td><strong>@bob_smith</strong></td>
-                            <td class="fw-bold">Rp 50.000</td>
-                            <td class="text-muted">Rp 2.500</td>
-                            <td class="fw-bold text-success">Rp 47.500</td>
-                            <td><small>DANA 0812****5678</small></td>
-                            <td><span class="badge bg-warning">Pending</span></td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td class="text-muted small">2026-02-15 13:45</td>
-                            <td>-</td>
-                            <td>
-                                <button class="btn btn-sm btn-success btn-action me-1" data-bs-toggle="modal" data-bs-target="#approveWdModal" title="Approve"><i class="fas fa-check"></i></button>
-                                <button class="btn btn-sm btn-danger btn-action" data-bs-toggle="modal" data-bs-target="#rejectWdModal" title="Reject"><i class="fas fa-times"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>27</td>
-                            <td><strong>@alice_w</strong></td>
-                            <td class="fw-bold">Rp 100.000</td>
-                            <td class="text-muted">Rp 5.000</td>
-                            <td class="fw-bold text-success">Rp 95.000</td>
-                            <td><small>ShopeePay 0856****1234</small></td>
-                            <td><span class="badge bg-warning">Pending</span></td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td class="text-muted small">2026-02-15 12:30</td>
-                            <td>-</td>
-                            <td>
-                                <button class="btn btn-sm btn-success btn-action me-1" data-bs-toggle="modal" data-bs-target="#approveWdModal" title="Approve"><i class="fas fa-check"></i></button>
-                                <button class="btn btn-sm btn-danger btn-action" data-bs-toggle="modal" data-bs-target="#rejectWdModal" title="Reject"><i class="fas fa-times"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>26</td>
-                            <td><strong>@hannah_p</strong></td>
-                            <td class="fw-bold">Rp 200.000</td>
-                            <td class="text-muted">Rp 10.000</td>
-                            <td class="fw-bold text-success">Rp 190.000</td>
-                            <td><small>DANA 0813****9012</small></td>
-                            <td><span class="badge bg-warning">Pending</span></td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td class="text-muted small">2026-02-15 10:15</td>
-                            <td>-</td>
-                            <td>
-                                <button class="btn btn-sm btn-success btn-action me-1" data-bs-toggle="modal" data-bs-target="#approveWdModal" title="Approve"><i class="fas fa-check"></i></button>
-                                <button class="btn btn-sm btn-danger btn-action" data-bs-toggle="modal" data-bs-target="#rejectWdModal" title="Reject"><i class="fas fa-times"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>25</td>
-                            <td><strong>@evan_k</strong></td>
-                            <td class="fw-bold">Rp 75.000</td>
-                            <td class="text-muted">Rp 3.750</td>
-                            <td class="fw-bold text-success">Rp 71.250</td>
-                            <td><small>ShopeePay 0878****3456</small></td>
-                            <td><span class="badge bg-success">Approved</span></td>
-                            <td>@superadmin</td>
-                            <td>Sudah ditransfer</td>
-                            <td class="text-muted small">2026-02-14 20:00</td>
-                            <td class="text-muted small">2026-02-15 11:55</td>
-                            <td>
-                                <button class="btn btn-sm btn-outline-secondary btn-action" disabled><i class="fas fa-check-double"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>24</td>
-                            <td><strong>@john_doe</strong></td>
-                            <td class="fw-bold">Rp 30.000</td>
-                            <td class="text-muted">Rp 1.500</td>
-                            <td class="fw-bold text-success">Rp 28.500</td>
-                            <td><small>DANA 0812****7890</small></td>
-                            <td><span class="badge bg-warning">Pending</span></td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td class="text-muted small">2026-02-14 18:30</td>
-                            <td>-</td>
-                            <td>
-                                <button class="btn btn-sm btn-success btn-action me-1" data-bs-toggle="modal" data-bs-target="#approveWdModal" title="Approve"><i class="fas fa-check"></i></button>
-                                <button class="btn btn-sm btn-danger btn-action" data-bs-toggle="modal" data-bs-target="#rejectWdModal" title="Reject"><i class="fas fa-times"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>23</td>
-                            <td><strong>@maria_g</strong></td>
-                            <td class="fw-bold">Rp 150.000</td>
-                            <td class="text-muted">Rp 7.500</td>
-                            <td class="fw-bold text-success">Rp 142.500</td>
-                            <td><small>DANA 0815****4567</small></td>
-                            <td><span class="badge bg-danger">Rejected</span></td>
-                            <td>@superadmin</td>
-                            <td>Saldo tidak cukup</td>
-                            <td class="text-muted small">2026-02-14 15:00</td>
-                            <td class="text-muted small">2026-02-14 16:00</td>
-                            <td>
-                                <button class="btn btn-sm btn-outline-secondary btn-action" disabled><i class="fas fa-ban"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>22</td>
-                            <td><strong>@diana_r</strong></td>
-                            <td class="fw-bold">Rp 25.000</td>
-                            <td class="text-muted">Rp 1.250</td>
-                            <td class="fw-bold text-success">Rp 23.750</td>
-                            <td><small>ShopeePay 0821****6789</small></td>
-                            <td><span class="badge bg-warning">Pending</span></td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td class="text-muted small">2026-02-14 11:00</td>
-                            <td>-</td>
-                            <td>
-                                <button class="btn btn-sm btn-success btn-action me-1" data-bs-toggle="modal" data-bs-target="#approveWdModal" title="Approve"><i class="fas fa-check"></i></button>
-                                <button class="btn btn-sm btn-danger btn-action" data-bs-toggle="modal" data-bs-target="#rejectWdModal" title="Reject"><i class="fas fa-times"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>21</td>
-                            <td><strong>@charlie_x</strong></td>
-                            <td class="fw-bold">Rp 60.000</td>
-                            <td class="text-muted">Rp 3.000</td>
-                            <td class="fw-bold text-success">Rp 57.000</td>
-                            <td><small>DANA 0819****2345</small></td>
-                            <td><span class="badge bg-success">Approved</span></td>
-                            <td>@superadmin</td>
-                            <td>OK</td>
-                            <td class="text-muted small">2026-02-13 22:00</td>
-                            <td class="text-muted small">2026-02-14 09:00</td>
-                            <td>
-                                <button class="btn btn-sm btn-outline-secondary btn-action" disabled><i class="fas fa-check-double"></i></button>
+                            <td colspan="12" class="text-center py-4">
+                                <div class="spinner-border text-primary" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
                             </td>
                         </tr>
                     </tbody>
@@ -259,7 +133,7 @@
         </div>
         <div class="card-footer bg-white">
             <div class="d-flex justify-content-between align-items-center">
-                <small class="text-muted">Menampilkan 1-8 dari 28 withdrawal</small>
+                <small class="text-muted">Menampilkan <span id="display-start">1</span>-<span id="display-end">10</span> dari <span id="total-display">0</span> withdrawal</small>
                 <nav>
                     <ul class="pagination pagination-sm mb-0">
                         <li class="page-item disabled"><a class="page-link" href="#">&laquo;</a></li>
@@ -284,16 +158,17 @@
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
+                <input type="hidden" id="withdrawalId">
                 <div class="alert alert-info">
-                    <strong>User:</strong> @bob_smith<br>
-                    <strong>Amount:</strong> Rp 50.000<br>
-                    <strong>Fee:</strong> Rp 2.500<br>
-                    <strong>Net Transfer:</strong> <strong>Rp 47.500</strong><br>
-                    <strong>Tujuan:</strong> DANA 0812****5678
+                    <strong>User ID:</strong> <span id="modalUserId">-</span><br>
+                    <strong>Amount:</strong> <span id="modalAmount">Rp 0</span><br>
+                    <strong>Fee:</strong> <span id="modalFee">Rp 0</span><br>
+                    <strong>Net Transfer:</strong> <strong><span id="modalNetAmount">Rp 0</span></strong><br>
+                    <strong>Tujuan:</strong> <span id="modalDestination">-</span>
                 </div>
                 <div class="alert alert-warning">
                     <i class="fas fa-exclamation-triangle me-1"></i>
-                    Pastikan Anda sudah mentransfer <strong>Rp 47.500</strong> ke akun tujuan sebelum meng-approve.
+                    Pastikan Anda sudah mentransfer <strong><span id="modalNetAmountAlert">Rp 0</span></strong> ke akun tujuan sebelum meng-approve.
                 </div>
                 <div class="mb-3">
                     <label for="wdApproveNotes" class="form-label fw-semibold">Catatan (opsional)</label>
@@ -316,9 +191,10 @@
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
+                <input type="hidden" id="rejectWithdrawalId">
                 <div class="alert alert-info">
-                    <strong>User:</strong> @bob_smith<br>
-                    <strong>Amount:</strong> Rp 50.000
+                    <strong>User ID:</strong> <span id="rejectUserId">-</span><br>
+                    <strong>Amount:</strong> <span id="rejectAmount">Rp 0</span>
                 </div>
                 <div class="mb-3">
                     <label for="wdRejectReason" class="form-label fw-semibold">Alasan Penolakan <span class="text-danger">*</span></label>
