@@ -134,7 +134,7 @@
         </div>
         <div class="card-footer bg-white">
             <div class="d-flex justify-content-between align-items-center">
-                <small class="text-muted">Menampilkan 1-10 dari 1,247 user</small>
+                <small class="text-muted">Menampilkan <span id="display-start">1</span>-<span id="display-end">10</span> dari <span id="total-display">0</span> user</small>
                 <nav>
                     <ul class="pagination pagination-sm mb-0">
                         <li class="page-item disabled"><a class="page-link" href="#">&laquo;</a></li>

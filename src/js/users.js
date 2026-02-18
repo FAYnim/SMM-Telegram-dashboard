@@ -52,6 +52,12 @@ $(document).ready(function() {
 
                     const tbody = $('#userTableBody');
                     tbody.empty();
+                    
+                    // Update footer display
+                    const total = response.result.length;
+                    $('#total-display').text(total);
+                    $('#display-end').text(total > 0 ? total : 0);
+                    
                     response.result.forEach((user, index) => {
                         const row = `<tr>
                             <td><input type="checkbox" class="form-check-input row-check"></td>
@@ -71,7 +77,10 @@ $(document).ready(function() {
                         tbody.append(row);
                     });
                 } else if(response.returncode == 204) {
+                    const tbody = $('#userTableBody');
                     tbody.html('<tr><td colspan="10" class="text-center py-4">No users found</td></tr>');
+                    $('#total-display').text(0);
+                    $('#display-end').text(0);
                 } else {
                     console.log("Failed to fetch users: ", response.returncode);
                 }

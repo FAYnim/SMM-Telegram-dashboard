@@ -97,8 +97,8 @@
 
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
-            <span><i class="fas fa-table me-2"></i>Daftar Deposit</span>
-            <span class="badge bg-warning">8 Pending</span>
+            <span><i class="fas fa-table me-2"></i>Daftar Deposit (<span id="total-deposit">0</span> total)</span>
+            <span class="badge bg-warning"><span id="total-pending">0</span> Pending</span>
         </div>
         <div class="card-body p-0">
             <div class="table-responsive">
@@ -117,151 +117,12 @@
                             <th>Aksi</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="depositTableBody">
                         <tr>
-                            <td>45</td>
-                            <td><strong>@john_doe</strong></td>
-                            <td class="fw-bold">Rp 100.000</td>
-                            <td><img src="https://placehold.co/50x50/e9ecef/495057?text=Bukti" class="proof-thumbnail" data-bs-toggle="modal" data-bs-target="#proofModal" alt="Proof"></td>
-                            <td><span class="badge bg-warning">Pending</span></td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td class="text-muted small">2026-02-15 14:30</td>
-                            <td>-</td>
-                            <td>
-                                <button class="btn btn-sm btn-success btn-action me-1" data-bs-toggle="modal" data-bs-target="#approveModal" title="Approve"><i class="fas fa-check"></i></button>
-                                <button class="btn btn-sm btn-danger btn-action" data-bs-toggle="modal" data-bs-target="#rejectModal" title="Reject"><i class="fas fa-times"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>44</td>
-                            <td><strong>@alice_w</strong></td>
-                            <td class="fw-bold">Rp 50.000</td>
-                            <td><img src="https://placehold.co/50x50/e9ecef/495057?text=Bukti" class="proof-thumbnail" data-bs-toggle="modal" data-bs-target="#proofModal" alt="Proof"></td>
-                            <td><span class="badge bg-warning">Pending</span></td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td class="text-muted small">2026-02-15 13:50</td>
-                            <td>-</td>
-                            <td>
-                                <button class="btn btn-sm btn-success btn-action me-1" data-bs-toggle="modal" data-bs-target="#approveModal" title="Approve"><i class="fas fa-check"></i></button>
-                                <button class="btn btn-sm btn-danger btn-action" data-bs-toggle="modal" data-bs-target="#rejectModal" title="Reject"><i class="fas fa-times"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>43</td>
-                            <td><strong>@diana_r</strong></td>
-                            <td class="fw-bold">Rp 200.000</td>
-                            <td><img src="https://placehold.co/50x50/e9ecef/495057?text=Bukti" class="proof-thumbnail" data-bs-toggle="modal" data-bs-target="#proofModal" alt="Proof"></td>
-                            <td><span class="badge bg-warning">Pending</span></td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td class="text-muted small">2026-02-15 12:15</td>
-                            <td>-</td>
-                            <td>
-                                <button class="btn btn-sm btn-success btn-action me-1" data-bs-toggle="modal" data-bs-target="#approveModal" title="Approve"><i class="fas fa-check"></i></button>
-                                <button class="btn btn-sm btn-danger btn-action" data-bs-toggle="modal" data-bs-target="#rejectModal" title="Reject"><i class="fas fa-times"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>42</td>
-                            <td><strong>@charlie_x</strong></td>
-                            <td class="fw-bold">Rp 200.000</td>
-                            <td><img src="https://placehold.co/50x50/d4edda/155724?text=OK" class="proof-thumbnail" data-bs-toggle="modal" data-bs-target="#proofModal" alt="Proof"></td>
-                            <td><span class="badge bg-success">Approved</span></td>
-                            <td>@superadmin</td>
-                            <td>Sesuai bukti</td>
-                            <td class="text-muted small">2026-02-15 11:00</td>
-                            <td class="text-muted small">2026-02-15 12:50</td>
-                            <td>
-                                <button class="btn btn-sm btn-outline-secondary btn-action" disabled><i class="fas fa-check-double"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>41</td>
-                            <td><strong>@fiona_m</strong></td>
-                            <td class="fw-bold">Rp 50.000</td>
-                            <td><img src="https://placehold.co/50x50/f8d7da/842029?text=X" class="proof-thumbnail" data-bs-toggle="modal" data-bs-target="#proofModal" alt="Proof"></td>
-                            <td><span class="badge bg-danger">Rejected</span></td>
-                            <td>@superadmin</td>
-                            <td>Bukti tidak valid</td>
-                            <td class="text-muted small">2026-02-15 09:30</td>
-                            <td class="text-muted small">2026-02-15 11:20</td>
-                            <td>
-                                <button class="btn btn-sm btn-outline-secondary btn-action" disabled><i class="fas fa-ban"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>40</td>
-                            <td><strong>@evan_k</strong></td>
-                            <td class="fw-bold">Rp 75.000</td>
-                            <td><img src="https://placehold.co/50x50/e9ecef/495057?text=Bukti" class="proof-thumbnail" data-bs-toggle="modal" data-bs-target="#proofModal" alt="Proof"></td>
-                            <td><span class="badge bg-warning">Pending</span></td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td class="text-muted small">2026-02-14 22:10</td>
-                            <td>-</td>
-                            <td>
-                                <button class="btn btn-sm btn-success btn-action me-1" data-bs-toggle="modal" data-bs-target="#approveModal" title="Approve"><i class="fas fa-check"></i></button>
-                                <button class="btn btn-sm btn-danger btn-action" data-bs-toggle="modal" data-bs-target="#rejectModal" title="Reject"><i class="fas fa-times"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>39</td>
-                            <td><strong>@hannah_p</strong></td>
-                            <td class="fw-bold">Rp 150.000</td>
-                            <td><img src="https://placehold.co/50x50/e9ecef/495057?text=Bukti" class="proof-thumbnail" data-bs-toggle="modal" data-bs-target="#proofModal" alt="Proof"></td>
-                            <td><span class="badge bg-warning">Pending</span></td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td class="text-muted small">2026-02-14 20:45</td>
-                            <td>-</td>
-                            <td>
-                                <button class="btn btn-sm btn-success btn-action me-1" data-bs-toggle="modal" data-bs-target="#approveModal" title="Approve"><i class="fas fa-check"></i></button>
-                                <button class="btn btn-sm btn-danger btn-action" data-bs-toggle="modal" data-bs-target="#rejectModal" title="Reject"><i class="fas fa-times"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>38</td>
-                            <td><strong>@bob_smith</strong></td>
-                            <td class="fw-bold">Rp 300.000</td>
-                            <td><img src="https://placehold.co/50x50/e9ecef/495057?text=Bukti" class="proof-thumbnail" data-bs-toggle="modal" data-bs-target="#proofModal" alt="Proof"></td>
-                            <td><span class="badge bg-warning">Pending</span></td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td class="text-muted small">2026-02-14 18:20</td>
-                            <td>-</td>
-                            <td>
-                                <button class="btn btn-sm btn-success btn-action me-1" data-bs-toggle="modal" data-bs-target="#approveModal" title="Approve"><i class="fas fa-check"></i></button>
-                                <button class="btn btn-sm btn-danger btn-action" data-bs-toggle="modal" data-bs-target="#rejectModal" title="Reject"><i class="fas fa-times"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>37</td>
-                            <td><strong>@maria_g</strong></td>
-                            <td class="fw-bold">Rp 500.000</td>
-                            <td><img src="https://placehold.co/50x50/d4edda/155724?text=OK" class="proof-thumbnail" data-bs-toggle="modal" data-bs-target="#proofModal" alt="Proof"></td>
-                            <td><span class="badge bg-success">Approved</span></td>
-                            <td>@superadmin</td>
-                            <td>OK</td>
-                            <td class="text-muted small">2026-02-14 15:00</td>
-                            <td class="text-muted small">2026-02-14 16:30</td>
-                            <td>
-                                <button class="btn btn-sm btn-outline-secondary btn-action" disabled><i class="fas fa-check-double"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>36</td>
-                            <td><strong>@george_l</strong></td>
-                            <td class="fw-bold">Rp 100.000</td>
-                            <td><img src="https://placehold.co/50x50/e2e3e5/41464b?text=-" class="proof-thumbnail" data-bs-toggle="modal" data-bs-target="#proofModal" alt="Proof"></td>
-                            <td><span class="badge bg-secondary">Canceled</span></td>
-                            <td>-</td>
-                            <td>Dibatalkan user</td>
-                            <td class="text-muted small">2026-02-14 12:00</td>
-                            <td>-</td>
-                            <td>
-                                <button class="btn btn-sm btn-outline-secondary btn-action" disabled><i class="fas fa-minus"></i></button>
+                            <td colspan="10" class="text-center py-4">
+                                <div class="spinner-border text-primary" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
                             </td>
                         </tr>
                     </tbody>
@@ -270,7 +131,7 @@
         </div>
         <div class="card-footer bg-white">
             <div class="d-flex justify-content-between align-items-center">
-                <small class="text-muted">Menampilkan 1-10 dari 45 deposit</small>
+                <small class="text-muted">Menampilkan <span id="display-start">1</span>-<span id="display-end">10</span> dari <span id="total-display">0</span> deposit</small>
                 <nav>
                     <ul class="pagination pagination-sm mb-0">
                         <li class="page-item disabled"><a class="page-link" href="#">&laquo;</a></li>
@@ -311,9 +172,10 @@
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
+                <input type="hidden" id="depositId">
                 <div class="alert alert-info">
-                    <strong>User:</strong> @john_doe<br>
-                    <strong>Amount Diminta:</strong> Rp 100.000
+                    <strong>User ID:</strong> <span id="modalUserId">-</span><br>
+                    <strong>Amount Diminta:</strong> <span id="modalAmount">Rp 0</span>
                 </div>
                 <div class="mb-3">
                     <label for="approveAmount" class="form-label fw-semibold">Jumlah yang Di-approve (Rp)</label>
@@ -341,9 +203,10 @@
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
+                <input type="hidden" id="rejectDepositId">
                 <div class="alert alert-info">
-                    <strong>User:</strong> @john_doe<br>
-                    <strong>Amount:</strong> Rp 100.000
+                    <strong>User ID:</strong> <span id="rejectUserId">-</span><br>
+                    <strong>Amount:</strong> <span id="rejectAmount">Rp 0</span>
                 </div>
                 <div class="mb-3">
                     <label for="rejectReason" class="form-label fw-semibold">Alasan Penolakan <span class="text-danger">*</span></label>
