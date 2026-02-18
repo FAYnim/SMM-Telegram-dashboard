@@ -24,6 +24,19 @@ if ($sql) {
     $result = $sql[0];
 
     $token = bin2hex(random_bytes(16));
+
+    // cek token
+    $sql = $db->select('smm_admin_sessions', '*', ["username" => "$user"]);
+    if($sql) {
+        $db->update('smm_admin_sessions', ["token" => $token, "expired_at" => date("Y-m-d H:i:s", strtotime("+7 days"))], ["username" => "$user"]);
+    } else {
+        $data = [
+            "token" => $token,
+            "username" => $user,
+            "expired_at" => date("Y-m-d H:i:s", strtotime("+7 days"))
+        ];
+        $db->insert('smm_admin_sessions', $data);
+    }
 } else {
     http_response_code(401);
     echo json_encode(["error" => "user not found"]);
