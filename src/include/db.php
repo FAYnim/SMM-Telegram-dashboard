@@ -222,5 +222,46 @@ class Database {
             return false;
         }
     }
+
+    /**
+     * Count records in table using query builder
+     * @param string $table Table name
+     * @param array $where WHERE conditions as associative array
+     * @return int|false Number of records on success, false on failure
+     */
+    public function count($table, $where = []) {
+        try {
+            // Build COUNT query
+            $sql = "SELECT COUNT(*) as total FROM {$table}";
+
+            // Build WHERE clause
+            if (!empty($where)) {
+                $conditions = [];
+                foreach ($where as $key => $value) {
+                    $conditions[] = "{$key} = :{$key}";
+                }
+                $sql .= ' WHERE ' . implode(' AND ', $conditions);
+            }
+
+            // Prepare statement
+            $stmt = $this->conn->prepare($sql);
+
+            // Bind WHERE values
+            if (!empty($where)) {
+                foreach ($where as $key => $value) {
+                    $stmt->bindValue(":{$key}", $value);
+                }
+            }
+
+            // Execute and return count
+            $stmt->execute();
+            $result = $stmt->fetch();
+            return (int) $result['total'];
+
+        } catch (PDOException $e) {
+            error_log("Count Error: " . $e->getMessage());
+            return false;
+        }
+    }
 }
 ?>

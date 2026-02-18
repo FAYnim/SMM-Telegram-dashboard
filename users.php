@@ -97,7 +97,7 @@
 
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
-            <span><i class="fas fa-table me-2"></i>Daftar User (1,247 total)</span>
+            <span><i class="fas fa-table me-2"></i>Daftar User (<span id="total-user">0</span> total)</span>
             <div>
                 <button class="btn btn-sm btn-outline-success me-1" title="Activate Selected"><i class="fas fa-check me-1"></i>Activate</button>
                 <button class="btn btn-sm btn-outline-danger" title="Suspend Selected"><i class="fas fa-ban me-1"></i>Suspend</button>
@@ -111,153 +111,21 @@
                             <th><input type="checkbox" class="form-check-input" id="selectAll"></th>
                             <th>ID</th>
                             <th>Username</th>
-                            <th>Nama</th>
+                            <th>Fullname</th>
                             <th>Chat ID</th>
                             <th>Status</th>
-                            <th>Balance</th>
-                            <th>Profit</th>
+                            <th>Msg ID</th>
+                            <th>Menu</th>
+                            <th>Submenu</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="userTableBody">
                         <tr>
-                            <td><input type="checkbox" class="form-check-input row-check"></td>
-                            <td>1</td>
-                            <td><strong>@john_doe</strong></td>
-                            <td>John Doe</td>
-                            <td><code>123456789</code></td>
-                            <td><span class="badge bg-success">Active</span></td>
-                            <td>Rp 150.000</td>
-                            <td>Rp 45.000</td>
-                            <td>
-                                <a href="user-detail.php?id=1" class="btn btn-sm btn-outline-primary btn-action me-1" title="Detail"><i class="fas fa-eye"></i></a>
-                                <button class="btn btn-sm btn-outline-danger btn-action" title="Suspend"><i class="fas fa-ban"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" class="form-check-input row-check"></td>
-                            <td>2</td>
-                            <td><strong>@alice_w</strong></td>
-                            <td>Alice Wonderland</td>
-                            <td><code>234567890</code></td>
-                            <td><span class="badge bg-success">Active</span></td>
-                            <td>Rp 320.000</td>
-                            <td>Rp 120.000</td>
-                            <td>
-                                <a href="user-detail.php?id=2" class="btn btn-sm btn-outline-primary btn-action me-1" title="Detail"><i class="fas fa-eye"></i></a>
-                                <button class="btn btn-sm btn-outline-danger btn-action" title="Suspend"><i class="fas fa-ban"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" class="form-check-input row-check"></td>
-                            <td>3</td>
-                            <td><strong>@bob_smith</strong></td>
-                            <td>Bob Smith</td>
-                            <td><code>345678901</code></td>
-                            <td><span class="badge bg-danger">Suspended</span></td>
-                            <td>Rp 0</td>
-                            <td>Rp 75.000</td>
-                            <td>
-                                <a href="user-detail.php?id=3" class="btn btn-sm btn-outline-primary btn-action me-1" title="Detail"><i class="fas fa-eye"></i></a>
-                                <button class="btn btn-sm btn-outline-success btn-action" title="Activate"><i class="fas fa-check"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" class="form-check-input row-check"></td>
-                            <td>4</td>
-                            <td><strong>@maria_g</strong></td>
-                            <td>Maria Garcia</td>
-                            <td><code>456789012</code></td>
-                            <td><span class="badge bg-success">Active</span></td>
-                            <td>Rp 500.000</td>
-                            <td>Rp 200.000</td>
-                            <td>
-                                <a href="user-detail.php?id=4" class="btn btn-sm btn-outline-primary btn-action me-1" title="Detail"><i class="fas fa-eye"></i></a>
-                                <button class="btn btn-sm btn-outline-danger btn-action" title="Suspend"><i class="fas fa-ban"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" class="form-check-input row-check"></td>
-                            <td>5</td>
-                            <td><strong>@charlie_x</strong></td>
-                            <td>Charlie Xavier</td>
-                            <td><code>567890123</code></td>
-                            <td><span class="badge bg-warning text-dark">Unregistered</span></td>
-                            <td>Rp 0</td>
-                            <td>Rp 0</td>
-                            <td>
-                                <a href="user-detail.php?id=5" class="btn btn-sm btn-outline-primary btn-action me-1" title="Detail"><i class="fas fa-eye"></i></a>
-                                <button class="btn btn-sm btn-outline-danger btn-action" title="Suspend"><i class="fas fa-ban"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" class="form-check-input row-check"></td>
-                            <td>6</td>
-                            <td><strong>@diana_r</strong></td>
-                            <td>Diana Ross</td>
-                            <td><code>678901234</code></td>
-                            <td><span class="badge bg-success">Active</span></td>
-                            <td>Rp 80.000</td>
-                            <td>Rp 35.000</td>
-                            <td>
-                                <a href="user-detail.php?id=6" class="btn btn-sm btn-outline-primary btn-action me-1" title="Detail"><i class="fas fa-eye"></i></a>
-                                <button class="btn btn-sm btn-outline-danger btn-action" title="Suspend"><i class="fas fa-ban"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" class="form-check-input row-check"></td>
-                            <td>7</td>
-                            <td><strong>@evan_k</strong></td>
-                            <td>Evan Knight</td>
-                            <td><code>789012345</code></td>
-                            <td><span class="badge bg-success">Active</span></td>
-                            <td>Rp 250.000</td>
-                            <td>Rp 95.000</td>
-                            <td>
-                                <a href="user-detail.php?id=7" class="btn btn-sm btn-outline-primary btn-action me-1" title="Detail"><i class="fas fa-eye"></i></a>
-                                <button class="btn btn-sm btn-outline-danger btn-action" title="Suspend"><i class="fas fa-ban"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" class="form-check-input row-check"></td>
-                            <td>8</td>
-                            <td><strong>@fiona_m</strong></td>
-                            <td>Fiona Martinez</td>
-                            <td><code>890123456</code></td>
-                            <td><span class="badge bg-success">Active</span></td>
-                            <td>Rp 175.000</td>
-                            <td>Rp 60.000</td>
-                            <td>
-                                <a href="user-detail.php?id=8" class="btn btn-sm btn-outline-primary btn-action me-1" title="Detail"><i class="fas fa-eye"></i></a>
-                                <button class="btn btn-sm btn-outline-danger btn-action" title="Suspend"><i class="fas fa-ban"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" class="form-check-input row-check"></td>
-                            <td>9</td>
-                            <td><strong>@george_l</strong></td>
-                            <td>George Lee</td>
-                            <td><code>901234567</code></td>
-                            <td><span class="badge bg-danger">Suspended</span></td>
-                            <td>Rp 0</td>
-                            <td>Rp 180.000</td>
-                            <td>
-                                <a href="user-detail.php?id=9" class="btn btn-sm btn-outline-primary btn-action me-1" title="Detail"><i class="fas fa-eye"></i></a>
-                                <button class="btn btn-sm btn-outline-success btn-action" title="Activate"><i class="fas fa-check"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" class="form-check-input row-check"></td>
-                            <td>10</td>
-                            <td><strong>@hannah_p</strong></td>
-                            <td>Hannah Park</td>
-                            <td><code>012345678</code></td>
-                            <td><span class="badge bg-success">Active</span></td>
-                            <td>Rp 420.000</td>
-                            <td>Rp 310.000</td>
-                            <td>
-                                <a href="user-detail.php?id=10" class="btn btn-sm btn-outline-primary btn-action me-1" title="Detail"><i class="fas fa-eye"></i></a>
-                                <button class="btn btn-sm btn-outline-danger btn-action" title="Suspend"><i class="fas fa-ban"></i></button>
+                            <td colspan="10" class="text-center py-4">
+                                <div class="spinner-border text-primary" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
                             </td>
                         </tr>
                     </tbody>

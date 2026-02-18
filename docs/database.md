@@ -133,6 +133,29 @@ $deleted = $db->delete('users', ['id' => 5]);
 
 ---
 
+### count($table, $where = [])
+
+Counts records in a database table.
+
+```php
+$db = new Database();
+$db->getConnection();
+
+// Count all users
+$totalUsers = $db->count('users');
+
+// Count with conditions
+$activeUsers = $db->count('users', ['status' => 'active']);
+```
+
+**Parameters:**
+- `$table` (string) - Name of the table to count from
+- `$where` (array) - WHERE conditions as associative array
+
+**Returns:** Number of records on success, or `false` on failure.
+
+---
+
 ## Basic Usage Example
 
 ```php
@@ -156,6 +179,10 @@ $db->update('users', ['status' => 'inactive'], ['id' => $userId]);
 
 // Delete data
 $db->delete('users', ['id' => $userId]);
+
+// Count data
+$totalUsers = $db->count('users');
+$activeUsers = $db->count('users', ['status' => 'active']);
 ?>
 ```
 
