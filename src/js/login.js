@@ -34,12 +34,16 @@ $(document).ready(function() {
                 success: (response) => {
                     if(response.returncode == 200) {
                         console.log("Login Success");
+                        CookieManager.set("auth_token", response.token, 7);
+                        window.location.href = "home.php";
                     } else {
                         console.log("Login Wrong");
                     }
                 },
-                error: (xhr) => {
-                    console.log("Login failed:", xhr.responseText)
+                error: (xhr, status, error) => {
+                    console.log("Status: ", status);
+                    console.log("Login failed: ", xhr.responseText);
+                    console.log("Error: ", error);
                 }
             });
         } else {

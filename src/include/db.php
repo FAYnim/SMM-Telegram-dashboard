@@ -21,9 +21,8 @@ class Database {
 
             $this->conn = new PDO($dsn, $this->db_user, $this->db_pass, $option);
 
-            echo "Connection Success";
         } catch (PDOException $e) {
-            echo "Connection Failed: ".$e->getMessage();
+            error_log("Connection Failed: ".$e->getMessage());
         }
 
         return $this->conn;
