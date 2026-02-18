@@ -1,4 +1,4 @@
-import { CookieManager } from "./auth-middleware";
+import { CookieManager } from "./auth-middleware.js";
 
 $(document).ready(function() {
     $('#sidebarToggle').on('click', function() {

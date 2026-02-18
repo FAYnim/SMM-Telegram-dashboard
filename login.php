@@ -24,7 +24,7 @@
                 <span id="loginAlertText">Username atau password salah.</span>
             </div>
 
-            <form id="loginForm" method="POST" action="home.php">
+            <form id="loginForm">
                 <div class="mb-3 text-start">
                     <label for="username" class="form-label fw-semibold">
                         <i class="fas fa-user me-1 text-muted"></i> Username
@@ -48,7 +48,7 @@
                         <label class="form-check-label small" for="rememberMe">Ingat saya</label>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary btn-login w-100">
+                <button type="submit" id="btn-login" class="btn btn-primary btn-login w-100">
                     <i class="fas fa-sign-in-alt me-1"></i> Masuk
                 </button>
             </form>
