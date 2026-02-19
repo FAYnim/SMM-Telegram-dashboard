@@ -69,13 +69,13 @@
         <div class="row g-2 align-items-end">
             <div class="col-md-3">
                 <label class="form-label small fw-semibold">Cari</label>
-                <input type="text" class="form-control" placeholder="Campaign atau worker...">
+                <input type="text" class="form-control" placeholder="Campaign ID atau worker ID..." id="searchTask">
             </div>
             <div class="col-md-2">
                 <label class="form-label small fw-semibold">Status</label>
-                <select class="form-select">
+                <select class="form-select" id="filterStatus">
                     <option value="">Semua Status</option>
-                    <option value="pending_review" selected>Pending Review</option>
+                    <option value="pending_review">Pending Review</option>
                     <option value="approved">Approved</option>
                     <option value="rejected">Rejected</option>
                     <option value="taken">Taken</option>
@@ -84,22 +84,22 @@
             </div>
             <div class="col-md-2">
                 <label class="form-label small fw-semibold">Dari Tanggal</label>
-                <input type="date" class="form-control">
+                <input type="date" class="form-control" id="dateFrom">
             </div>
             <div class="col-md-2">
                 <label class="form-label small fw-semibold">Sampai Tanggal</label>
-                <input type="date" class="form-control">
+                <input type="date" class="form-control" id="dateTo">
             </div>
             <div class="col-md-3">
-                <button class="btn btn-primary w-100"><i class="fas fa-search me-1"></i> Filter</button>
+                <button class="btn btn-primary w-100" id="filterBtn"><i class="fas fa-search me-1"></i> Filter</button>
             </div>
         </div>
     </div>
 
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
-            <span><i class="fas fa-table me-2"></i>Daftar Task</span>
-            <span class="badge bg-warning">6 Pending Review</span>
+            <span><i class="fas fa-table me-2"></i>Daftar Task (<span id="total-task">0</span> total)</span>
+            <span class="badge bg-warning"><span id="total-pending">0</span> Pending Review</span>
         </div>
         <div class="card-body p-0">
             <div class="table-responsive">
@@ -117,147 +117,12 @@
                             <th>Aksi</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="taskTableBody">
                         <tr>
-                            <td>156</td>
-                            <td>Like IG Post @brand</td>
-                            <td><strong>@alice_w</strong></td>
-                            <td><span class="badge bg-warning">Pending Review</span></td>
-                            <td><img src="https://placehold.co/50x50/e9ecef/495057?text=SS" class="proof-thumbnail" data-bs-toggle="modal" data-bs-target="#proofModal" alt="Proof"></td>
-                            <td class="text-muted small">2026-02-15 13:00</td>
-                            <td class="text-muted small">2026-02-15 14:15</td>
-                            <td>-</td>
-                            <td>
-                                <a href="task-detail.php?id=156" class="btn btn-sm btn-outline-primary btn-action me-1" title="Detail"><i class="fas fa-eye"></i></a>
-                                <button class="btn btn-sm btn-success btn-action me-1" data-bs-toggle="modal" data-bs-target="#approveTaskModal" title="Approve"><i class="fas fa-check"></i></button>
-                                <button class="btn btn-sm btn-danger btn-action" data-bs-toggle="modal" data-bs-target="#rejectTaskModal" title="Reject"><i class="fas fa-times"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>155</td>
-                            <td>Follow IG @mystore</td>
-                            <td><strong>@diana_r</strong></td>
-                            <td><span class="badge bg-warning">Pending Review</span></td>
-                            <td><img src="https://placehold.co/50x50/e9ecef/495057?text=SS" class="proof-thumbnail" data-bs-toggle="modal" data-bs-target="#proofModal" alt="Proof"></td>
-                            <td class="text-muted small">2026-02-15 12:00</td>
-                            <td class="text-muted small">2026-02-15 13:30</td>
-                            <td>-</td>
-                            <td>
-                                <a href="task-detail.php?id=155" class="btn btn-sm btn-outline-primary btn-action me-1" title="Detail"><i class="fas fa-eye"></i></a>
-                                <button class="btn btn-sm btn-success btn-action me-1" data-bs-toggle="modal" data-bs-target="#approveTaskModal" title="Approve"><i class="fas fa-check"></i></button>
-                                <button class="btn btn-sm btn-danger btn-action" data-bs-toggle="modal" data-bs-target="#rejectTaskModal" title="Reject"><i class="fas fa-times"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>154</td>
-                            <td>Comment YouTube Review</td>
-                            <td><strong>@evan_k</strong></td>
-                            <td><span class="badge bg-warning">Pending Review</span></td>
-                            <td><img src="https://placehold.co/50x50/e9ecef/495057?text=SS" class="proof-thumbnail" data-bs-toggle="modal" data-bs-target="#proofModal" alt="Proof"></td>
-                            <td class="text-muted small">2026-02-15 11:00</td>
-                            <td class="text-muted small">2026-02-15 12:20</td>
-                            <td>-</td>
-                            <td>
-                                <a href="task-detail.php?id=154" class="btn btn-sm btn-outline-primary btn-action me-1" title="Detail"><i class="fas fa-eye"></i></a>
-                                <button class="btn btn-sm btn-success btn-action me-1" data-bs-toggle="modal" data-bs-target="#approveTaskModal" title="Approve"><i class="fas fa-check"></i></button>
-                                <button class="btn btn-sm btn-danger btn-action" data-bs-toggle="modal" data-bs-target="#rejectTaskModal" title="Reject"><i class="fas fa-times"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>153</td>
-                            <td>Like Video TikTok</td>
-                            <td><strong>@hannah_p</strong></td>
-                            <td><span class="badge bg-warning">Pending Review</span></td>
-                            <td><img src="https://placehold.co/50x50/e9ecef/495057?text=SS" class="proof-thumbnail" data-bs-toggle="modal" data-bs-target="#proofModal" alt="Proof"></td>
-                            <td class="text-muted small">2026-02-15 10:30</td>
-                            <td class="text-muted small">2026-02-15 11:45</td>
-                            <td>-</td>
-                            <td>
-                                <a href="task-detail.php?id=153" class="btn btn-sm btn-outline-primary btn-action me-1" title="Detail"><i class="fas fa-eye"></i></a>
-                                <button class="btn btn-sm btn-success btn-action me-1" data-bs-toggle="modal" data-bs-target="#approveTaskModal" title="Approve"><i class="fas fa-check"></i></button>
-                                <button class="btn btn-sm btn-danger btn-action" data-bs-toggle="modal" data-bs-target="#rejectTaskModal" title="Reject"><i class="fas fa-times"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>152</td>
-                            <td>View TikTok Promo</td>
-                            <td><strong>@fiona_m</strong></td>
-                            <td><span class="badge bg-warning">Pending Review</span></td>
-                            <td><img src="https://placehold.co/50x50/e9ecef/495057?text=SS" class="proof-thumbnail" data-bs-toggle="modal" data-bs-target="#proofModal" alt="Proof"></td>
-                            <td class="text-muted small">2026-02-15 09:00</td>
-                            <td class="text-muted small">2026-02-15 10:10</td>
-                            <td>-</td>
-                            <td>
-                                <a href="task-detail.php?id=152" class="btn btn-sm btn-outline-primary btn-action me-1" title="Detail"><i class="fas fa-eye"></i></a>
-                                <button class="btn btn-sm btn-success btn-action me-1" data-bs-toggle="modal" data-bs-target="#approveTaskModal" title="Approve"><i class="fas fa-check"></i></button>
-                                <button class="btn btn-sm btn-danger btn-action" data-bs-toggle="modal" data-bs-target="#rejectTaskModal" title="Reject"><i class="fas fa-times"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>151</td>
-                            <td>Follow IG @mystore</td>
-                            <td><strong>@george_l</strong></td>
-                            <td><span class="badge bg-warning">Pending Review</span></td>
-                            <td><img src="https://placehold.co/50x50/e9ecef/495057?text=SS" class="proof-thumbnail" data-bs-toggle="modal" data-bs-target="#proofModal" alt="Proof"></td>
-                            <td class="text-muted small">2026-02-14 22:00</td>
-                            <td class="text-muted small">2026-02-14 23:15</td>
-                            <td>-</td>
-                            <td>
-                                <a href="task-detail.php?id=151" class="btn btn-sm btn-outline-primary btn-action me-1" title="Detail"><i class="fas fa-eye"></i></a>
-                                <button class="btn btn-sm btn-success btn-action me-1" data-bs-toggle="modal" data-bs-target="#approveTaskModal" title="Approve"><i class="fas fa-check"></i></button>
-                                <button class="btn btn-sm btn-danger btn-action" data-bs-toggle="modal" data-bs-target="#rejectTaskModal" title="Reject"><i class="fas fa-times"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>150</td>
-                            <td>Like IG Post @brand</td>
-                            <td><strong>@john_doe</strong></td>
-                            <td><span class="badge bg-success">Approved</span></td>
-                            <td><img src="https://placehold.co/50x50/d4edda/155724?text=OK" class="proof-thumbnail" data-bs-toggle="modal" data-bs-target="#proofModal" alt="Proof"></td>
-                            <td class="text-muted small">2026-02-14 14:00</td>
-                            <td class="text-muted small">2026-02-14 15:30</td>
-                            <td class="text-muted small">2026-02-14 18:00</td>
-                            <td>
-                                <a href="task-detail.php?id=150" class="btn btn-sm btn-outline-primary btn-action" title="Detail"><i class="fas fa-eye"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>149</td>
-                            <td>Comment YouTube Review</td>
-                            <td><strong>@diana_r</strong></td>
-                            <td><span class="badge bg-success">Approved</span></td>
-                            <td><img src="https://placehold.co/50x50/d4edda/155724?text=OK" class="proof-thumbnail" data-bs-toggle="modal" data-bs-target="#proofModal" alt="Proof"></td>
-                            <td class="text-muted small">2026-02-14 12:00</td>
-                            <td class="text-muted small">2026-02-14 13:00</td>
-                            <td class="text-muted small">2026-02-15 12:30</td>
-                            <td>
-                                <a href="task-detail.php?id=149" class="btn btn-sm btn-outline-primary btn-action" title="Detail"><i class="fas fa-eye"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>148</td>
-                            <td>View TikTok Promo</td>
-                            <td><strong>@hannah_p</strong></td>
-                            <td><span class="badge bg-danger">Rejected</span></td>
-                            <td><img src="https://placehold.co/50x50/f8d7da/842029?text=X" class="proof-thumbnail" data-bs-toggle="modal" data-bs-target="#proofModal" alt="Proof"></td>
-                            <td class="text-muted small">2026-02-14 08:00</td>
-                            <td class="text-muted small">2026-02-14 09:00</td>
-                            <td class="text-muted small">2026-02-15 10:10</td>
-                            <td>
-                                <a href="task-detail.php?id=148" class="btn btn-sm btn-outline-primary btn-action" title="Detail"><i class="fas fa-eye"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>147</td>
-                            <td>Like Video TikTok</td>
-                            <td><strong>@bob_smith</strong></td>
-                            <td><span class="badge bg-warning text-dark">Taken</span></td>
-                            <td><span class="text-muted small">-</span></td>
-                            <td class="text-muted small">2026-02-15 14:00</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>
-                                <a href="task-detail.php?id=147" class="btn btn-sm btn-outline-primary btn-action" title="Detail"><i class="fas fa-eye"></i></a>
+                            <td colspan="9" class="text-center py-4">
+                                <div class="spinner-border text-primary" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
                             </td>
                         </tr>
                     </tbody>
@@ -266,15 +131,11 @@
         </div>
         <div class="card-footer bg-white">
             <div class="d-flex justify-content-between align-items-center">
-                <small class="text-muted">Menampilkan 1-10 dari 156 task</small>
+                <small class="text-muted">Menampilkan <span id="display-start">1</span>-<span id="display-end">10</span> dari <span id="total-display">0</span> task</small>
                 <nav>
                     <ul class="pagination pagination-sm mb-0">
                         <li class="page-item disabled"><a class="page-link" href="#">&laquo;</a></li>
                         <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">...</a></li>
-                        <li class="page-item"><a class="page-link" href="#">16</a></li>
                         <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
                     </ul>
                 </nav>
@@ -307,13 +168,13 @@
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
+                <input type="hidden" id="taskId">
                 <div class="alert alert-info">
-                    <strong>Task #156</strong><br>
-                    <strong>Campaign:</strong> Like IG Post @brand<br>
-                    <strong>Worker:</strong> @alice_w<br>
-                    <strong>Reward:</strong> Rp 500
+                    <strong>Task #<span id="modalTaskId">-</span></strong><br>
+                    <strong>Campaign ID:</strong> <span id="modalCampaignId">-</span><br>
+                    <strong>Worker ID:</strong> <span id="modalWorkerId">-</span>
                 </div>
-                <p>Task ini akan di-approve dan reward <strong>Rp 500</strong> akan ditambahkan ke profit worker.</p>
+                <p>Task ini akan di-approve.</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
@@ -331,10 +192,11 @@
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
+                <input type="hidden" id="rejectTaskId">
                 <div class="alert alert-info">
-                    <strong>Task #156</strong><br>
-                    <strong>Campaign:</strong> Like IG Post @brand<br>
-                    <strong>Worker:</strong> @alice_w
+                    <strong>Task #<span id="rejectModalTaskId">-</span></strong><br>
+                    <strong>Campaign ID:</strong> <span id="rejectModalCampaignId">-</span><br>
+                    <strong>Worker ID:</strong> <span id="rejectModalWorkerId">-</span>
                 </div>
                 <div class="mb-3">
                     <label for="taskRejectReason" class="form-label fw-semibold">Alasan Penolakan <span class="text-danger">*</span></label>
