@@ -80,28 +80,28 @@
                         <label class="form-label fw-semibold">Nomor DANA</label>
                         <div class="input-group">
                             <span class="input-group-text"><i class="fas fa-phone"></i></span>
-                            <input type="text" class="form-control" value="081234567890" placeholder="Nomor DANA">
+                            <input type="text" class="form-control" id="dana_number" value="loading..." placeholder="Nomor DANA" disabled>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <label class="form-label fw-semibold">Nama Akun DANA</label>
                         <div class="input-group">
                             <span class="input-group-text"><i class="fas fa-user"></i></span>
-                            <input type="text" class="form-control" value="Admin SMM Bot" placeholder="Nama pemilik akun DANA">
+                            <input type="text" class="form-control" id="dana_name" value="loading..." placeholder="Nama pemilik akun DANA" disabled>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <label class="form-label fw-semibold">Nomor ShopeePay</label>
                         <div class="input-group">
                             <span class="input-group-text"><i class="fas fa-phone"></i></span>
-                            <input type="text" class="form-control" value="089876543210" placeholder="Nomor ShopeePay">
+                            <input type="text" class="form-control" id="shopeepay_number" value="loading..." placeholder="Nomor ShopeePay" disabled>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <label class="form-label fw-semibold">Nama Akun ShopeePay</label>
                         <div class="input-group">
                             <span class="input-group-text"><i class="fas fa-user"></i></span>
-                            <input type="text" class="form-control" value="Admin SMM Bot" placeholder="Nama pemilik akun ShopeePay">
+                            <input type="text" class="form-control" id="shopeepay_name" value="loading..." placeholder="Nama pemilik akun ShopeePay" disabled>
                         </div>
                     </div>
                 </div>
@@ -123,14 +123,14 @@
                         <label class="form-label fw-semibold">Minimum Withdrawal (Rp)</label>
                         <div class="input-group">
                             <span class="input-group-text">Rp</span>
-                            <input type="number" class="form-control" value="20000" min="0">
+                            <input type="number" class="form-control" id="min_withdraw" value="0" min="0" disabled>
                         </div>
                         <div class="form-text">Jumlah minimum yang bisa ditarik user</div>
                     </div>
                     <div class="col-md-4">
                         <label class="form-label fw-semibold">Admin Fee</label>
                         <div class="input-group">
-                            <input type="number" class="form-control" value="2500" min="0">
+                            <input type="number" class="form-control" id="admin_fee" value="0" min="0" disabled>
                             <span class="input-group-text" id="feeTypeLabel">Rp (Flat)</span>
                         </div>
                         <div class="form-text">Biaya admin per penarikan</div>
@@ -139,11 +139,11 @@
                         <label class="form-label fw-semibold">Tipe Fee</label>
                         <div class="mt-2">
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="feeType" id="feeFlat" value="flat" checked>
+                                <input class="form-check-input" type="radio" name="feeType" id="feeFlat" value="flat" disabled>
                                 <label class="form-check-label" for="feeFlat">Flat (Rp)</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="feeType" id="feePercent" value="percentage">
+                                <input class="form-check-input" type="radio" name="feeType" id="feePercent" value="percentage" disabled>
                                 <label class="form-check-label" for="feePercent">Percentage (%)</label>
                             </div>
                         </div>
@@ -167,7 +167,7 @@
                         <label class="form-label fw-semibold">Minimum Harga Per Task (Rp)</label>
                         <div class="input-group">
                             <span class="input-group-text">Rp</span>
-                            <input type="number" class="form-control" value="100" min="0">
+                            <input type="number" class="form-control" id="min_price_per_task" value="0" min="0" disabled>
                         </div>
                         <div class="form-text">Harga minimum yang bisa ditetapkan per task dalam campaign</div>
                     </div>
@@ -190,7 +190,7 @@
                         <label class="form-label fw-semibold">Referral Wajib</label>
                         <div class="mt-2">
                             <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" id="referralMandatory" checked style="width:3em;height:1.5em;">
+                                <input class="form-check-input" type="checkbox" id="referralMandatory" style="width:3em;height:1.5em;" disabled>
                                 <label class="form-check-label ms-2" for="referralMandatory" id="referralLabel">
                                     <span class="badge bg-success">Aktif</span> - User wajib memasukkan kode referral saat registrasi
                                 </label>
@@ -201,7 +201,7 @@
                         <label class="form-label fw-semibold">Reward Referral (Rp)</label>
                         <div class="input-group">
                             <span class="input-group-text">Rp</span>
-                            <input type="number" class="form-control" value="5000" min="0">
+                            <input type="number" class="form-control" id="reward_amount" value="0" min="0" disabled>
                         </div>
                         <div class="form-text">Reward yang diterima referrer ketika referred user aktif</div>
                     </div>

@@ -37,6 +37,60 @@ $(document).ready(function() {
         $(this).removeClass('show');
     });
 
+    const disableFormInputs = () => {
+        $('#paymentForm input[type="text"]').val('loading...').prop('disabled', true);
+        
+        $('#withdrawForm input[type="number"]').val(0).prop('disabled', true);
+        $('#campaignForm input[type="number"]').val(0).prop('disabled', true);
+        $('#referralForm input[type="number"]').val(0).prop('disabled', true);
+        
+        $('#withdrawForm input[type="radio"]').prop('checked', false).prop('disabled', true);
+        
+        $('#referralForm input[type="checkbox"]').prop('checked', false).prop('disabled', true);
+        
+        $('#paymentForm select').prop('disabled', true);
+        $('#withdrawForm select').prop('disabled', true);
+        $('#campaignForm select').prop('disabled', true);
+        $('#referralForm select').prop('disabled', true);
+        
+        $('form textarea').val('loading...').prop('disabled', true);
+    };
+
+    const getSettings = () => {
+        disableFormInputs();
+        
+        $.ajax({
+            url: 'src/api/get-settings.php',
+            type: 'GET',
+            dataType: 'json',
+            success: function(response) {
+                if (response.returncode === 200) {
+                    const settings = response.result;
+                    settings.forEach(setting => {
+                        if(setting.setting_key === 'admin_fee_type') {
+                            $('input[name="feeType"][value="' + setting.setting_value + '"]').prop('checked', true).trigger('change');
+                        } else if(setting.setting_key === 'referral_mandatory') {
+                            if(setting.setting_value === '1') {
+                                $('#referralMandatory').prop('checked', true);
+                            } else {
+                                $('#referralMandatory').prop('checked', false);
+                            }
+                        } else {
+                            $("#" + setting.setting_key).val(setting.setting_value);
+                        }
+                    });
+                } else {
+                    console.error('Failed to load settings: ' + response.message);
+                }
+            },
+            error: function(xhr, status, error) {
+                console.error('Error loading settings: ' + error);
+            }
+        });
+    };
+    getSettings();
+
+
     $('input[name="feeType"]').on('change', function() {
         if ($(this).val() === 'flat') {
             $('#feeTypeLabel').text('Rp (Flat)');
