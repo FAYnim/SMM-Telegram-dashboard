@@ -128,8 +128,8 @@
     </div>
 
     <div class="card">
-        <div class="card-header">
-            <i class="fas fa-table me-2"></i>Riwayat Transaksi
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <span><i class="fas fa-table me-2"></i>Riwayat Transaksi (<span id="total-transactions">0</span> total)</span>
         </div>
         <div class="card-body p-0">
             <div class="table-responsive">
@@ -147,116 +147,13 @@
                             <th>Tanggal</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="transactionTableBody">
                         <tr>
-                            <td>520</td>
-                            <td><strong>@john_doe</strong></td>
-                            <td><span class="badge bg-success">Deposit</span></td>
-                            <td class="text-success fw-bold">+Rp 100.000</td>
-                            <td>Rp 50.000</td>
-                            <td>Rp 150.000</td>
-                            <td class="small">Deposit via DANA</td>
-                            <td><span class="badge bg-success">Approved</span></td>
-                            <td class="text-muted small">2026-02-15 14:30</td>
-                        </tr>
-                        <tr>
-                            <td>519</td>
-                            <td><strong>@alice_w</strong></td>
-                            <td><span class="badge bg-primary">Task Reward</span></td>
-                            <td class="text-success fw-bold">+Rp 500</td>
-                            <td>Rp 119.500</td>
-                            <td>Rp 120.000</td>
-                            <td class="small">Reward: Like IG Post @brand (Task #150)</td>
-                            <td><span class="badge bg-success">Approved</span></td>
-                            <td class="text-muted small">2026-02-15 13:00</td>
-                        </tr>
-                        <tr>
-                            <td>518</td>
-                            <td><strong>@bob_smith</strong></td>
-                            <td><span class="badge bg-danger">Withdraw</span></td>
-                            <td class="text-danger fw-bold">-Rp 50.000</td>
-                            <td>Rp 125.000</td>
-                            <td>Rp 75.000</td>
-                            <td class="small">Withdrawal ke DANA 0812****5678</td>
-                            <td><span class="badge bg-warning">Pending</span></td>
-                            <td class="text-muted small">2026-02-15 12:00</td>
-                        </tr>
-                        <tr>
-                            <td>517</td>
-                            <td><strong>@diana_r</strong></td>
-                            <td><span class="badge bg-primary">Task Reward</span></td>
-                            <td class="text-success fw-bold">+Rp 2.000</td>
-                            <td>Rp 33.000</td>
-                            <td>Rp 35.000</td>
-                            <td class="small">Reward: Comment YT Review (Task #149)</td>
-                            <td><span class="badge bg-success">Approved</span></td>
-                            <td class="text-muted small">2026-02-15 11:00</td>
-                        </tr>
-                        <tr>
-                            <td>516</td>
-                            <td><strong>@charlie_x</strong></td>
-                            <td><span class="badge bg-success">Deposit</span></td>
-                            <td class="text-success fw-bold">+Rp 200.000</td>
-                            <td>Rp 0</td>
-                            <td>Rp 200.000</td>
-                            <td class="small">Deposit via ShopeePay</td>
-                            <td><span class="badge bg-success">Approved</span></td>
-                            <td class="text-muted small">2026-02-15 10:00</td>
-                        </tr>
-                        <tr>
-                            <td>515</td>
-                            <td><strong>@evan_k</strong></td>
-                            <td><span class="badge bg-danger">Withdraw</span></td>
-                            <td class="text-danger fw-bold">-Rp 75.000</td>
-                            <td>Rp 170.000</td>
-                            <td>Rp 95.000</td>
-                            <td class="small">Withdrawal ke ShopeePay 0878****3456</td>
-                            <td><span class="badge bg-success">Approved</span></td>
-                            <td class="text-muted small">2026-02-15 09:00</td>
-                        </tr>
-                        <tr>
-                            <td>514</td>
-                            <td><strong>@maria_g</strong></td>
-                            <td><span class="badge bg-success">Deposit</span></td>
-                            <td class="text-success fw-bold">+Rp 500.000</td>
-                            <td>Rp 0</td>
-                            <td>Rp 500.000</td>
-                            <td class="small">Deposit via DANA</td>
-                            <td><span class="badge bg-success">Approved</span></td>
-                            <td class="text-muted small">2026-02-14 16:30</td>
-                        </tr>
-                        <tr>
-                            <td>513</td>
-                            <td><strong>@fiona_m</strong></td>
-                            <td><span class="badge bg-primary">Task Reward</span></td>
-                            <td class="text-success fw-bold">+Rp 200</td>
-                            <td>Rp 59.800</td>
-                            <td>Rp 60.000</td>
-                            <td class="small">Reward: View TikTok Promo (Task #145)</td>
-                            <td><span class="badge bg-success">Approved</span></td>
-                            <td class="text-muted small">2026-02-14 15:00</td>
-                        </tr>
-                        <tr>
-                            <td>512</td>
-                            <td><strong>@george_l</strong></td>
-                            <td><span class="badge bg-secondary">Adjustment</span></td>
-                            <td class="text-success fw-bold">+Rp 10.000</td>
-                            <td>Rp 170.000</td>
-                            <td>Rp 180.000</td>
-                            <td class="small">Kompensasi error sistem</td>
-                            <td><span class="badge bg-success">Approved</span></td>
-                            <td class="text-muted small">2026-02-14 12:00</td>
-                        </tr>
-                        <tr>
-                            <td>511</td>
-                            <td><strong>@hannah_p</strong></td>
-                            <td><span class="badge bg-primary">Task Reward</span></td>
-                            <td class="text-success fw-bold">+Rp 1.500</td>
-                            <td>Rp 308.500</td>
-                            <td>Rp 310.000</td>
-                            <td class="small">Reward: Follow IG @mystore (Task #142)</td>
-                            <td><span class="badge bg-success">Approved</span></td>
-                            <td class="text-muted small">2026-02-14 10:00</td>
+                            <td colspan="9" class="text-center py-4">
+                                <div class="spinner-border text-primary" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -264,7 +161,7 @@
         </div>
         <div class="card-footer bg-white">
             <div class="d-flex justify-content-between align-items-center">
-                <small class="text-muted">Menampilkan 1-10 dari 520 transaksi</small>
+                <small class="text-muted">Menampilkan <span id="display-start">1</span>-<span id="display-end">10</span> dari <span id="total-display">0</span> transaksi</small>
                 <nav>
                     <ul class="pagination pagination-sm mb-0">
                         <li class="page-item disabled"><a class="page-link" href="#">&laquo;</a></li>
