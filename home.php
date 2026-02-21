@@ -78,7 +78,7 @@
 
     <div class="row g-3 mb-4">
         <div class="col-xl-3 col-md-6">
-            <div class="card kpi-card">
+            <div class="card kpi-card h-100">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-start">
                         <div>
@@ -94,7 +94,7 @@
             </div>
         </div>
         <div class="col-xl-3 col-md-6">
-            <div class="card kpi-card">
+            <div class="card kpi-card h-100">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-start">
                         <div>
@@ -110,7 +110,7 @@
             </div>
         </div>
         <div class="col-xl-3 col-md-6">
-            <div class="card kpi-card">
+            <div class="card kpi-card h-100">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-start">
                         <div>
@@ -126,7 +126,7 @@
             </div>
         </div>
         <div class="col-xl-3 col-md-6">
-            <div class="card kpi-card">
+            <div class="card kpi-card h-100">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-start">
                         <div>
@@ -145,7 +145,7 @@
 
     <div class="row g-3 mb-4">
         <div class="col-xl-3 col-md-6">
-            <div class="card kpi-card">
+            <div class="card kpi-card h-100">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-start">
                         <div>
@@ -160,7 +160,7 @@
             </div>
         </div>
         <div class="col-xl-3 col-md-6">
-            <div class="card kpi-card">
+            <div class="card kpi-card h-100">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-start">
                         <div>
@@ -175,7 +175,7 @@
             </div>
         </div>
         <div class="col-xl-3 col-md-6">
-            <div class="card kpi-card">
+            <div class="card kpi-card h-100">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-start">
                         <div>
@@ -190,7 +190,7 @@
             </div>
         </div>
         <div class="col-xl-3 col-md-6">
-            <div class="card kpi-card">
+            <div class="card kpi-card h-100">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-start">
                         <div>
@@ -208,7 +208,7 @@
 
     <div class="row g-3 mb-4">
         <div class="col-lg-7">
-            <div class="card">
+            <div class="card h-100">
                 <div class="card-header d-flex justify-content-between align-items-center">
                     <span><i class="fas fa-chart-line me-2"></i>Tren Registrasi User (30 Hari)</span>
                     <span class="badge bg-primary">+127 user</span>
@@ -221,7 +221,7 @@
             </div>
         </div>
         <div class="col-lg-5">
-            <div class="card">
+            <div class="card h-100">
                 <div class="card-header d-flex justify-content-between align-items-center">
                     <span><i class="fas fa-chart-bar me-2"></i>Volume Transaksi (7 Hari)</span>
                     <span class="badge bg-info">342 transaksi</span>
