@@ -1,15 +1,16 @@
 <?php
 header('Content-Type: application/json');
 
-require_once __DIR__.'/../include/db.php';
+require_once __DIR__ . '/../include/db.php';
 $db = new Database();
 $conn = $db->getConnection();
 
-$sql = $db->select('smm_users', '*', [], [], 10);
+$sql = $db->select('smm_users', '*', [], '', 10);
 if ($sql) {
     $returncode = 200;
     $result = $sql;
-} else {
+}
+else {
     $returncode = 204;
     $result = [];
 }
