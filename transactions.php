@@ -70,7 +70,7 @@
             <div class="card">
                 <div class="card-body summary-card">
                     <div class="summary-label">Total Deposits</div>
-                    <div class="summary-value text-success"><i class="fas fa-arrow-down me-1"></i>Rp 5.200.000</div>
+                    <div class="summary-value text-success"><i class="fas fa-arrow-down me-1"></i>Rp <span id="total-deposit">0</span></div>
                 </div>
             </div>
         </div>
@@ -78,7 +78,7 @@
             <div class="card">
                 <div class="card-body summary-card">
                     <div class="summary-label">Total Rewards</div>
-                    <div class="summary-value text-primary"><i class="fas fa-gift me-1"></i>Rp 2.450.000</div>
+                    <div class="summary-value text-primary"><i class="fas fa-gift me-1"></i>Rp <span id="total-task-reward">0</span></div>
                 </div>
             </div>
         </div>
@@ -86,7 +86,7 @@
             <div class="card">
                 <div class="card-body summary-card">
                     <div class="summary-label">Total Withdrawals</div>
-                    <div class="summary-value text-danger"><i class="fas fa-arrow-up me-1"></i>Rp 3.100.000</div>
+                    <div class="summary-value text-danger"><i class="fas fa-arrow-up me-1"></i>Rp <span id="total-withdraw">0</span></div>
                 </div>
             </div>
         </div>

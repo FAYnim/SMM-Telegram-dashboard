@@ -46,6 +46,9 @@ $(document).ready(function () {
                 if (response.returncode == 200) {
                     const total_transactions = response.total_transactions;
                     $('#total-transactions').text(total_transactions);
+                    $('#total-deposit').text(response.total_deposit);
+                    $('#total-task-reward').text(response.total_task_reward);
+                    $('#total-withdraw').text(response.total_withdraw);
 
                     const tbody = $('#transactionTableBody');
                     tbody.empty();
