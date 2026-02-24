@@ -263,5 +263,28 @@ class Database {
             return false;
         }
     }
+
+    /**
+     * Execute raw SQL query
+     * @param string $sql Raw SQL query with ? placeholders
+     * @param array $params Optional parameters for prepared statement
+     * @return array|int|false Results on SELECT, affected rows on INSERT/UPDATE/DELETE, false on failure
+     */
+    public function query($sql, $params = []) {
+        try {
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute($params);
+
+            if (stripos($sql, 'SELECT') === 0) {
+                return $stmt->fetchAll();
+            }
+
+            return $stmt->rowCount();
+
+        } catch (PDOException $e) {
+            error_log("Query Error: " . $e->getMessage());
+            return false;
+        }
+    }
 }
 ?>

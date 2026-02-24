@@ -45,6 +45,9 @@ $(document).ready(function() {
             url: 'src/api/get-users.php',
             type: 'GET',
             dataType: 'json',
+            headers: {
+                'Authorization': `Bearer ${auth_token}`
+            },
             success: (response) => {
                 if(response.returncode == 200) {
                     const total_user = response.total_user;

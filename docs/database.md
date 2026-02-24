@@ -156,6 +156,46 @@ $activeUsers = $db->count('users', ['status' => 'active']);
 
 ---
 
+### query($sql, $params = [])
+
+Executes a raw SQL query with optional prepared statement parameters using `?` placeholders.
+
+```php
+$db = new Database();
+$db->getConnection();
+
+// Simple query without parameters
+$users = $db->query("SELECT * FROM users WHERE status = 'active'");
+
+// Query with ? placeholders
+$users = $db->query("SELECT * FROM users WHERE status = ?", ['active']);
+
+// Query with multiple parameters
+$orders = $db->query("SELECT * FROM orders WHERE user_id = ? AND status = ?", [1, 'completed']);
+
+// INSERT query
+$db->query("INSERT INTO logs (message, created_at) VALUES (?, NOW())", ['User login']);
+
+// UPDATE query
+$affected = $db->query("UPDATE users SET points = points + ? WHERE id = ?", [10, 5]);
+
+// DELETE query
+$db->query("DELETE FROM sessions WHERE expires_at < ?", [time()]);
+```
+
+**Parameters:**
+- `$sql` (string) - Raw SQL query with `?` placeholders
+- `$params` (array) - Array of values to bind to the placeholders (optional)
+
+**Returns:** 
+- Array of results for SELECT queries on success
+- Number of affected rows for INSERT/UPDATE/DELETE on success
+- `false` on failure
+
+**Note:** This method is useful for complex queries that cannot be handled by the query builder methods. Always use `?` placeholders instead of directly embedding values to prevent SQL injection.
+
+---
+
 ## Basic Usage Example
 
 ```php
@@ -183,6 +223,9 @@ $db->delete('users', ['id' => $userId]);
 // Count data
 $totalUsers = $db->count('users');
 $activeUsers = $db->count('users', ['status' => 'active']);
+
+// Raw SQL query
+$results = $db->query("SELECT * FROM users WHERE id > ?", [100]);
 ?>
 ```
 

@@ -5,6 +5,10 @@ require_once __DIR__ . '/../include/db.php';
 $db = new Database();
 $conn = $db->getConnection();
 
+// Cek JWT
+// $token = getBearerToken();
+// $payload = jwt_decode($token);
+
 $sql = $db->select('smm_users', '*', [], '', 10);
 if ($sql) {
     $returncode = 200;
